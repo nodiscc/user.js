@@ -1,6 +1,8 @@
 Firefox hardening
 =================
 
+[![Build Status](https://travis-ci.org/pyllyukko/user.js.svg?branch=master)](https://travis-ci.org/pyllyukko/user.js)
+
 What's all this then?
 ---------------------
 
@@ -356,6 +358,7 @@ Online tests
   * [Test page for Firefox's built-in Malware Protection](https://itisatrap.org/firefox/unwanted.html) (unwanted software)
 * [Firefox Resources Reader - BrowserLeaks.com](https://www.browserleaks.com/firefox) (see [#163](https://github.com/pyllyukko/user.js/issues/163))
 * [SSL Checker | Symantec CryptoReport](https://cryptoreport.websecurity.symantec.com/checker/views/sslCheck.jsp)
+* [Unique Machine](http://www.uniquemachine.org/)
 
 ### HTML5test
 

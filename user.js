@@ -10,14 +10,18 @@
 // https://wiki.mozilla.org/Platform/GFX/HardwareAcceleration
 // https://www.macromedia.com/support/documentation/en/flashplayer/help/help01.html
 // https://github.com/dillbyrne/random-agent-spoofer/issues/74
- user_pref("gfx.direct2d.disabled",				true);
- user_pref("layers.acceleration.disabled",			true);
+user_pref("gfx.direct2d.disabled",				true);
+user_pref("layers.acceleration.disabled",			true);
 
 
 /******************************************************************************
  * HTML5 / APIs / DOM                                                         *
  *                                                                            *
  ******************************************************************************/
+
+// Make sure the User Timing API does not provide a new high resolution timestamp
+// https://trac.torproject.org/projects/tor/ticket/16336
+user_pref("dom.enable_user_timing",				false);
 
 // disable Location-Aware Browsing
 // https://www.mozilla.org/en-US/firefox/geolocation/
@@ -76,6 +80,7 @@ user_pref("media.webspeech.recognition.enable",			false);
 // Disable getUserMedia screen sharing
 // https://mozilla.github.io/webrtc-landing/gum_test.html
 user_pref("media.getusermedia.screensharing.enabled",		false);
+user_pref("media.getusermedia.audiocapture.enabled",		false);
 
 // Disable sensor API
 // https://wiki.mozilla.org/Sensor_API
@@ -205,6 +210,11 @@ user_pref("browser.display.use_document_fonts",			0);
  * extensions / plugins                                                       *
  *                                                                            *
  ******************************************************************************/
+
+// Ensure you have a security delay when installing add-ons (milliseconds)
+// http://kb.mozillazine.org/Disable_extension_install_delay_-_Firefox
+// http://www.squarefree.com/2004/07/01/race-conditions-in-security-dialogs/
+user_pref("security.dialog_enable_delay",			1000);
 
 // Require signatures
 //user_pref("xpinstall.signatures.required",		true);
@@ -490,13 +500,25 @@ user_pref("browser.cache.disk_cache_ssl",			false);
 
 // CIS Version 1.2.0 October 21st, 2011 2.5.2 Disallow Credential Storage
 user_pref("signon.rememberSignons",				false);
-
 // CIS Version 1.2.0 October 21st, 2011 2.5.5 Delete Download History
 // Zero (0) is an indication that no download history is retained for the current profile.
 user_pref("browser.download.manager.retention",			0);
 
-// CIS Version 1.2.0 October 21st, 2011 2.5.6 Delete Search and Form History
+// http://kb.mozillazine.org/Signon.autofillForms
+// Do not automatically fill sign-in forms with known usernames and passwords; 
+// instead allow selecting username/password from a list.
+// https://www.torproject.org/projects/torbrowser/design/#identifier-linkability
+user_pref("signon.autofillForms",				false);
+
+// Don't save information entered in web page forms and the Search Bar, disable form autofill
 user_pref("browser.formfill.enable",				false);
+
+// Disable the password manager for pages with autocomplete=off
+// Does not prevent any kind of auto-completion (see browser.formfill.enable, signon.autofillForms)
+// OWASP ASVS V9.1, https://bugzilla.mozilla.org/show_bug.cgi?id=956906
+//user_pref("signon.storeWhenAutocompleteOff",			false);
+          
+// CIS Version 1.2.0 October 21st, 2011 2.5.6 Delete Search and Form History
 user_pref("browser.formfill.expire_days",			0);
 
 // CIS Version 1.2.0 October 21st, 2011 2.5.7 Clear SSL Form Session Data
@@ -517,8 +539,20 @@ user_pref("browser.pagethumbnails.capturing_disabled",		true);
  *                                                                            *
  ******************************************************************************/
 
+// Enable insecure password warnings (login forms in non-HTTPS pages)
+// https://blog.mozilla.org/tanvi/2016/01/28/no-more-passwords-over-http-please/
+// https://bugzilla.mozilla.org/show_bug.cgi?id=1319119
+// https://bugzilla.mozilla.org/show_bug.cgi?id=1217156
+user_pref("security.insecure_password.ui.enabled",		true);
+
 // Webpages will not be able to affect the right-click menu
 //user_pref("dom.event.contextmenu.enabled",		false);
+
+// Disable "Are you sure you want to leave this page?" popups on page close
+// https://support.mozilla.org/en-US/questions/1043508
+// Does not prevent JS leaks of the page close event.
+// https://developer.mozilla.org/en-US/docs/Web/Events/beforeunload
+//user_pref("dom.disable_beforeunload",    true);
 
 // CIS 2.3.2 Disable Downloading on Desktop
 user_pref("browser.download.folderList",			2);
@@ -562,10 +596,6 @@ user_pref("layout.css.visited_links_enabled",			false);
 // http://kb.mozillazine.org/Disabling_autocomplete_-_Firefox#Firefox_3.5
 user_pref("browser.urlbar.autocomplete.enabled",		false);
 
-// http://kb.mozillazine.org/Signon.autofillForms
-// https://www.torproject.org/projects/torbrowser/design/#identifier-linkability
-user_pref("signon.autofillForms",				false);
-
 // do not check if firefox is the default browser
 user_pref("browser.shell.checkDefaultBrowser",			false);
 
@@ -603,7 +633,10 @@ user_pref("security.ssl.disable_session_identifiers",		true);
 // 1 = TLS 1.0 is the minimum required / maximum supported encryption protocol. (This is the current default for the maximum supported version.)
 // 2 = TLS 1.1 is the minimum required / maximum supported encryption protocol.
 user_pref("security.tls.version.min",				1);
-user_pref("security.tls.version.max",				3);
+user_pref("security.tls.version.max",				4);
+
+// TLS version fallback
+user_pref("security.tls.version.fallback-limit",		3);
 
 // pinning
 // https://wiki.mozilla.org/SecurityEngineering/Public_Key_Pinning#How_to_use_pinning

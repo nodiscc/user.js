@@ -1,0 +1,14 @@
+language: node_js
+node_js:
+  - "node"
+before_script:
+  - npm install -g acorn
+script:
+  - acorn user.js
+  - bash -n cas.sh
+notifications:
+  irc:
+    channels:
+      - "chat.freenode.net#user.js"
+    on_success: always
+    on_failure: always
