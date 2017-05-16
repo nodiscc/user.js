@@ -1,6 +1,21 @@
 MAKEFLAGS := --jobs=1
 
+# patches to apply when running 'make custom', see the patches/ directory
+CUSTOM_PATCHES := "no-private-browsing"
+
 all: whatdoesitdo tests
+
+###################
+
+custom:
+	@for i in $(CUSTOM_PATCHES); do \
+	if [ ! -f "patches/$$i.patch" ]; \
+	then echo "[ERROR] Non existing file patches/$$i.patch" ; exit 1; \
+	else cp user.js custom.js && patch custom.js "patches/$$i.patch" && echo "$$i.patch applied"; \
+	fi; \
+	done
+
+###################
 
 whatdoesitdo:
 	@# generate the README "What does it do?" section

@@ -423,6 +423,14 @@ In addition see the current [issues](https://github.com/pyllyukko/user.js/issues
 
 -------------------------------------------------------------------------
 
+## Customizing user.js
+
+There are many reasons for which you would want to change the default user.js settings.
+You may not care about a particular threat (eg. shoulder surfing) or consider some settings too strict (features disabled because of past security issues).
+
+
+-------------------------------------------------------------------------
+
 ## FAQ
 
 > Does this user.js file fix all security problems?
