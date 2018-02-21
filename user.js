@@ -31,13 +31,13 @@ user_pref("dom.enable_performance",				false);
 // https://www.w3.org/TR/2013/REC-user-timing-20131212/#privacy-security
 user_pref("dom.enable_user_timing",				false);
 
-// PREF: Disable Web Audio API
+// PREF: Disable Web Audio API (disabled)
 // https://bugzilla.mozilla.org/show_bug.cgi?id=1288359
 user_pref("dom.webaudio.enabled",				false);
 
-// PREF: Disable Location-Aware Browsing (geolocation)
+// PREF: Disable Location-Aware Browsing (geolocation) (fully opt-in) (disabled)
 // https://www.mozilla.org/en-US/firefox/geolocation/
-user_pref("geo.enabled",					false);
+//user_pref("geo.enabled",					false);
 
 // PREF: When geolocation is enabled, use Mozilla geolocation service instead of Google
 // https://bugzilla.mozilla.org/show_bug.cgi?id=689252
