@@ -902,6 +902,7 @@ user_pref("browser.download.useDownloadDir",			false);
 // PREF: Disable the "new tab page" feature and show a cutom page instead
 // https://wiki.mozilla.org/Privacy/Reviews/New_Tab
 // https://support.mozilla.org/en-US/kb/new-tab-page-show-hide-and-customize-top-sites#w_how-do-i-turn-the-new-tab-page-off
+// https://github.com/nodiscc/ohmpage
 user_pref("browser.newtabpage.enabled",				false);
 user_pref("browser.newtab.url",					"/usr/share/ohmpage/index.html");
 
@@ -1163,3 +1164,121 @@ user_pref("security.ssl3.dhe_dss_camellia_256_sha",		false);
 // PREF: Fallbacks due compatibility reasons
 user_pref("security.ssl3.rsa_aes_256_sha",			true); // 0x35
 user_pref("security.ssl3.rsa_aes_128_sha",			true); // 0x2f
+
+/******************************************************************************
+ * TWEAKS FOR https://github.com/nodiscc/dbu                                 *
+******************************************************************************/
+
+// Abort long redirections and popup spam
+user_pref("network.http.redirection-limit", 5);
+user_pref("dom.popup_maximum", 10);
+
+// PREF: Pressing [Backspace] will go back a page in the session history (usability)
+// http://kb.mozillazine.org/Browser.backspace_action
+user_pref("browser.backspace_action", 0);
+
+// PREF: Do not paste clipboard contents on middle-click on Linux (usability)
+// http://kb.mozillazine.org/Middlemouse.contentLoadURL
+// http://kb.mozillazine.org/Middlemouse.paste
+user_pref("middlemouse.contentLoadURL", false);
+user_pref("middlemouse.paste", false);
+
+// Let transmission handle magnet links (usability)
+user_pref("network.protocol-handler.app.magnet", "/usr/bin/transmission-gtk");
+
+// Allow mouse-wheel click scrolling (usability)
+user_pref("general.autoScroll", true);
+
+// The browser will prompt for confirmation when closing the browser when more than one tab is open. (UI)
+// http://kb.mozillazine.org/About:config_entries#Browser.
+user_pref("browser.tabs.warnOnClose", true);
+
+// Hide "know your rights" button on first run (UI)
+user_pref("browser.rights.3.shown", false);
+
+// PREF: Disable MAF addon welcome page (UI, addons) (disabled)
+//user_pref("extensions.maf.other.displaywelcomepage", false);
+
+// PREF: Use custom startup homepage instead of about:home (UI)
+// https://github.com/nodiscc/ohmpage
+user_pref("browser.startup.homepage", "/usr/share/ohmpage/index.html");
+
+// PREF: Suppress Firefox Accounts "Welcome" page/"What's new" page after upgrades (UI, usability), show a custom page instead
+// https://github.com/nodiscc/ohmpage
+user_pref("startup.homepage_welcome_url", "");
+user_pref("startup.homepage_welcome_url.additional", "");
+user_pref("startup.homepage_override_url", "/usr/share/ohmpage/index.html");
+
+// PREF: Display installed addons list by default in about:addons (instead of AMO homepage) (UI)
+user_pref("extensions.ui.lastCategory", "addons://list/extension");
+
+// PREF: Show new search bar menu (UI)
+user_pref("browser.search.showOneOffButtons", true);
+
+// PREF: Disable CanvasBlocker notifications (UI, addons)
+user_pref("extensions.CanvasBlocker@kkapsner.de.showNotifications", false);
+
+// PREF: Disable sending metrics to greasemonkey servers (addons) (disabled)
+//user_pref("extensions.greasemonkey.stats.prompted", true);
+
+// PREF: Allow addon installation from user's profile directory (TODO insecure, workaround for unattended addons setup)
+// http://kb.mozillazine.org/About:config_entries#Extensions.
+user_pref("extensions.autoDisableScopes", 0);
+user_pref("extensions.enabledScopes", 15);
+
+// PREF: Disable showing Decentraleyes release notes (addons)
+user_pref("extensions.jid1-BoFifL9Vbdl2zQ@jetpack.showReleaseNotes", false);
+
+// Disable HTTPS Everywhere observatory (addons)
+// user_pref("extensions.https_everywhere._observatory.enabled", false);
+// user_pref("extensions.https_everywhere._observatory.popup_shown", true);
+// user_pref("extensions.https_everywhere._observatory.clean_config", true);
+// user_pref("extensions.https_everywhere.firstrun_context_menu", false);
+// user_pref("extensions.https_everywhere.toolbar_hint_shown", true);
+// user_pref("extensions.https_everywhere.prefs_version", 1);
+
+// Show addon selection/review UI for preinstalled addons (disabled)
+// https://blog.mozilla.org/addons/2011/08/11/strengthening-user-control-of-add-ons/
+//user_pref("extensions.shownSelectionUI", true);
+
+// Enable TLS False start (improves network latency, disabled)
+// https://tools.ietf.org/html/draft-bmoeller-tls-falsestart-00
+//user_pref("security.ssl.enable_false_start", true);
+
+// Auto-enable these addons (disabled)
+// https://github.com/yardenac/sext/blob/master/mozilla.cfg
+//user_pref("extensions.enabledAddons", "");
+
+// Pref: Enable HTTP pipelining (performance)
+user_pref("network.http.pipelining", true);
+user_pref("network.http.pipelining.maxrequests", 8);
+user_pref("network.http.pipelining.ssl", true);
+
+// Only store 3 previous history pages in memory (performance) (default: -1, automatic)
+// http://kb.mozillazine.org/Browser.sessionhistory.max_total_viewers
+user_pref("browser.sessionhistory.max_total_viewers", 3);
+
+// Pref: Increase time between session save operations (performance) 
+// http://kb.mozillazine.org/Browser.sessionstore.interval
+// (default=15000)
+user_pref("browser.sessionstore.interval", 180000);
+
+// PREF: Disable smooth scrolling (performance)
+user_pref("general.smoothScroll", false);
+user_pref("general.smoothScroll.pages", false);
+
+// PREF: Force webGL acceleration (performance) (disabled)
+// user_pref("layers.acceleration.force-enabled", true);
+// user_pref("layers.offmainthreadcomposition.enabled", true);
+
+// Proxy preferences (performance) (disabled)
+// user_pref("network.http.max-persistent-connections-per-proxy", 16);
+// user_pref("network.http.max-persistent-connections-per-server", 16);
+// user_pref("network.http.proxy.pipelining", true);
+
+// PREF: Perform DNS lookups on remote SOCKS proxy server when a SOCKS proxy is enabled (disabled)
+//user_pref("network.proxy.socks_remote_dns", true);
+
+// PREF: set fallback font to workaround the default serif showing incorrect characters for some icon fonts
+// https://github.com/pyllyukko/user.js/pull/300
+user_pref("font.name.serif.x-western",					"sans-serif");
