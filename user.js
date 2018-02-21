@@ -374,7 +374,7 @@ user_pref("security.dialog_enable_delay",			1000);
 
 // PREF: Require signatures
 // https://wiki.mozilla.org/Addons/Extension_Signing
-//user_pref("xpinstall.signatures.required",		true);
+user_pref("xpinstall.signatures.required",		true);
 
 // PREF: Opt-out of add-on metadata updates
 // https://blog.mozilla.org/addons/how-to-opt-out-of-add-on-metadata-updates/
