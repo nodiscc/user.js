@@ -755,22 +755,22 @@ user_pref("network.cookie.thirdparty.sessionOnly",		true);
 
 // PREF: Do not download URLs for the offline cache
 // http://kb.mozillazine.org/Browser.cache.offline.enable
-user_pref("browser.cache.offline.enable",			false);
+//user_pref("browser.cache.offline.enable",			false);
 
-// PREF: Clear history when Firefox closes
+// PREF: Clear history when Firefox closes (disabled)
 // https://support.mozilla.org/en-US/kb/Clear%20Recent%20History#w_how-do-i-make-firefox-clear-my-history-automatically
-// NOTICE: Installing user.js will remove your browsing history, caches and local storage.
-// NOTICE: Installing user.js **will remove your saved passwords** (https://github.com/pyllyukko/user.js/issues/27)
-// NOTICE: Clearing open windows on Firefox exit causes 2 windows to open when Firefox starts https://bugzilla.mozilla.org/show_bug.cgi?id=1334945
-user_pref("privacy.sanitize.sanitizeOnShutdown",		true);
-user_pref("privacy.clearOnShutdown.cache",			true);
-user_pref("privacy.clearOnShutdown.cookies",			true);
-user_pref("privacy.clearOnShutdown.downloads",			true);
-user_pref("privacy.clearOnShutdown.formdata",			true);
-user_pref("privacy.clearOnShutdown.history",			true);
-user_pref("privacy.clearOnShutdown.offlineApps",		true);
-user_pref("privacy.clearOnShutdown.sessions",			true);
-user_pref("privacy.clearOnShutdown.openWindows",		true);
+// NOTICE-DISABLED: Installing user.js will remove your browsing history, caches and local storage.
+// NOTICE-DISABLED: Installing user.js **will remove your saved passwords** (https://github.com/pyllyukko/user.js/issues/27)
+// NOTICE-DISABLED: Clearing open windows on Firefox exit causes 2 windows to open when Firefox starts https://bugzilla.mozilla.org/show_bug.cgi?id=1334945
+//user_pref("privacy.sanitize.sanitizeOnShutdown",		true);
+//user_pref("privacy.clearOnShutdown.cache",			true);
+//user_pref("privacy.clearOnShutdown.cookies",			true);
+//user_pref("privacy.clearOnShutdown.downloads",		true);
+//user_pref("privacy.clearOnShutdown.formdata",		true);
+//user_pref("privacy.clearOnShutdown.history",			true);
+//user_pref("privacy.clearOnShutdown.offlineApps",		true);
+//user_pref("privacy.clearOnShutdown.sessions",		true);
+//user_pref("privacy.clearOnShutdown.openWindows",		true);
 
 // PREF: Set time range to "Everything" as default in "Clear Recent History"
 user_pref("privacy.sanitize.timeSpan",				0);
@@ -784,25 +784,25 @@ user_pref("privacy.cpd.formdata",				true);
 user_pref("privacy.cpd.history",				true);
 user_pref("privacy.cpd.sessions",				true);
 
-// PREF: Don't remember browsing history
-user_pref("places.history.enabled",				false);
+// PREF: Don't remember browsing history (disabled)
+//user_pref("places.history.enabled",				false);
 
-// PREF: Disable disk cache
+// PREF: Disable disk cache (disabled)
 // http://kb.mozillazine.org/Browser.cache.disk.enable
-user_pref("browser.cache.disk.enable",				false);
+//user_pref("browser.cache.disk.enable",				false);
 
 // PREF: Disable memory cache (disabled)
 // http://kb.mozillazine.org/Browser.cache.memory.enable
 //user_pref("browser.cache.memory.enable",		false);
 
-// PREF: Disable Caching of SSL Pages
+// PREF: Disable Caching of SSL Pages  (disabled)
 // CIS Version 1.2.0 October 21st, 2011 2.5.8
 // http://kb.mozillazine.org/Browser.cache.disk_cache_ssl
-user_pref("browser.cache.disk_cache_ssl",			false);
+//user_pref("browser.cache.disk_cache_ssl",			false);
 
-// PREF: Disable download history
+// PREF: Disable download history (disabled)
 // CIS Version 1.2.0 October 21st, 2011 2.5.5
-user_pref("browser.download.manager.retention",			0);
+//user_pref("browser.download.manager.retention",			0);
 
 // PREF: Disable password manager (use an external password manager!)
 // CIS Version 1.2.0 October 21st, 2011 2.5.2
