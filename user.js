@@ -561,10 +561,10 @@ user_pref("loop.logDomains",					false);
 // CIS 2.1.1
 //user_pref("app.update.auto",					true);
 
-// PREF: Enforce checking for Firefox updates
+// PREF: Enforce checking for Firefox updates (disabled)
 // http://kb.mozillazine.org/App.update.enabled
-// NOTICE: Update check page might incorrectly report Firefox ESR as out-of-date
-user_pref("app.update.enabled",                 true);
+// NOTICE-DISABLED: Update check page might incorrectly report Firefox ESR as out-of-date
+//user_pref("app.update.enabled",                 true);
 
 // PREF: Enable blocking reported web forgeries
 // https://wiki.mozilla.org/Security/Safe_Browsing
