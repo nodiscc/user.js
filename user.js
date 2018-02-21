@@ -194,6 +194,9 @@ user_pref("webgl.enable-debug-renderer-info",			false);
 // https://bugzilla.mozilla.org/show_bug.cgi?id=1360039
 user_pref("dom.maxHardwareConcurrency",				2);
 
+// PREF: Disable WebAssembly
+//user_pref("javascript.options.wasm",				false);
+
 /******************************************************************************
  * SECTION: Misc                                                              *
  ******************************************************************************/
@@ -1230,6 +1233,9 @@ user_pref("extensions.CanvasBlocker@kkapsner.de.showNotifications", false);
 // http://kb.mozillazine.org/About:config_entries#Extensions.
 user_pref("extensions.autoDisableScopes", 0);
 user_pref("extensions.enabledScopes", 15);
+
+// PREF: Disable showing Decentraleyes release notes (addons)
+user_pref("extensions.jid1-BoFifL9Vbdl2zQ@jetpack.showReleaseNotes", false);
 
 // Disable HTTPS Everywhere observatory (addons)
 // user_pref("extensions.https_everywhere._observatory.enabled", false);
