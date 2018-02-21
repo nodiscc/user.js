@@ -234,9 +234,9 @@ user_pref("clipboard.autocopy",					false);
 // https://hg.mozilla.org/mozilla-central/rev/52d635f2b33d
 user_pref("javascript.use_us_english_locale",			true);
 
-// PREF: Do not submit invalid URIs entered in the address bar to the default search engine
+// PREF: Do not submit invalid URIs entered in the address bar to the default search engine (disabled)
 // http://kb.mozillazine.org/Keyword.enabled
-user_pref("keyword.enabled",					false);
+//user_pref("keyword.enabled",					false);
 
 // PREF: Don't trim HTTP off of URLs in the address bar.
 // https://bugzilla.mozilla.org/show_bug.cgi?id=665580
