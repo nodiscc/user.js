@@ -542,6 +542,8 @@ user_pref("datareporting.policy.dataSubmissionEnabled",		false);
 // PREF: Disable Heartbeat  (Mozilla user rating telemetry)
 // https://wiki.mozilla.org/Advocacy/heartbeat
 // https://trac.torproject.org/projects/tor/ticket/19047
+// https://trac.torproject.org/projects/tor/ticket/18738
+user_pref("browser.selfsupport.enabled",            false);
 user_pref("browser.selfsupport.url",				"");
 
 // PREF: Disable Firefox Hello (disabled) (Firefox < 49)
