@@ -1234,9 +1234,6 @@ user_pref("extensions.CanvasBlocker@kkapsner.de.showNotifications", false);
 user_pref("extensions.autoDisableScopes", 0);
 user_pref("extensions.enabledScopes", 15);
 
-// PREF: Disable showing Decentraleyes release notes (addons)
-user_pref("extensions.jid1-BoFifL9Vbdl2zQ@jetpack.showReleaseNotes", false);
-
 // Disable HTTPS Everywhere observatory (addons)
 // user_pref("extensions.https_everywhere._observatory.enabled", false);
 // user_pref("extensions.https_everywhere._observatory.popup_shown", true);
