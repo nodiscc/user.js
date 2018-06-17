@@ -95,9 +95,10 @@ Copy the produced file to the Firefox installation directory. The file should be
 
 #### Additional installation steps for Windows / OS X / Gentoo / Archlinux
 
-Create `local-settings.js` in Firefox installation directory, with the following contents:
+Create `autoconfig.js` in Firefox installation directory, with the following contents:
 
 ```
+// Important: first line of the file must be a comment
 pref("general.config.obscure_value", 0);
 pref("general.config.filename", "mozilla.cfg");
 ```
@@ -110,10 +111,6 @@ This file should be located at:
 | OS X                      | `/Applications/Firefox.app/Contents/Resources/defaults/pref`                    |
 | Linux (Gentoo, Archlinux) | `/usr/lib/firefox/defaults/pref/`, might also be `/usr/lib32/` or `/usr/lib64/` |
 
-If `mozilla.cfg` still fails to load, you must add a blank comment to the top of `mozilla.cfg` like so:
-```
-//
-```
 
 ### Updating using git
 
@@ -528,6 +525,7 @@ For more information, see [CONTRIBUTING](https://github.com/pyllyukko/user.js/bl
 * [Policy Templates for Firefox](https://github.com/mozilla/policy-templates)
 * [Mozilla preferences for uber-geeks](https://developer.mozilla.org/en-US/docs/Mozilla/Preferences/Mozilla_preferences_for_uber-geeks)
 * [Privacy & Security related add-ons](https://addons.mozilla.org/firefox/extensions/privacy-security/) ([RSS](https://addons.mozilla.org/en-US/firefox/extensions/privacy-security/format:rss?sort=featured))
+* [Customizing Firefox using AutoConfig](https://support.mozilla.org/en-US/kb/customizing-firefox-using-autoconfig)
 
 #### Other documentation
 
