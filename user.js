@@ -32,7 +32,7 @@ user_pref("dom.enable_user_timing",				false);
 
 // PREF: Disable Web Audio API (disabled)
 // https://bugzilla.mozilla.org/show_bug.cgi?id=1288359
-user_pref("dom.webaudio.enabled",				false);
+//user_pref("dom.webaudio.enabled",				false);
 
 // PREF: Disable Location-Aware Browsing (geolocation) (fully opt-in) (disabled)
 // https://www.mozilla.org/en-US/firefox/geolocation/
