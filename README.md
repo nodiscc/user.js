@@ -140,8 +140,6 @@ Some of the settings in this `user.js` file might seem redundant, as some of the
 ### HTML5 / APIs / DOM
 
 HTML5 / [APIs](https://wiki.mozilla.org/WebAPI) / [DOM](https://en.wikipedia.org/wiki/Document_Object_Model) related settings. Mozilla is keen to implement every new HTML5 feature, which have had unforeseen security or privacy implications. This section disables many of those new and yet to be proven technologies.
-* Disable Service Workers [ [1](https://developer.mozilla.org/en-US/docs/Web/API/Worker) [2](https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorker_API) [3](https://wiki.mozilla.org/Firefox/Push_Notifications#Service_Workers) ]
-* Disable Web Workers [ [1](https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Using_web_workers) [2](https://www.w3schools.com/html/html5_webworkers.asp) ]
 * Disable web notifications [ [1](https://support.mozilla.org/en-US/questions/1140439) ]
 * Disable DOM timing API [ [1](https://wiki.mozilla.org/Security/Reviews/Firefox/NavigationTimingAPI) [2](https://www.w3.org/TR/navigation-timing/#privacy) ]
 * Make sure the User Timing API does not provide a new high resolution timestamp [ [1](https://trac.torproject.org/projects/tor/ticket/16336) [2](https://www.w3.org/TR/2013/REC-user-timing-20131212/#privacy-security) ]
@@ -176,7 +174,6 @@ Settings that do not belong to other sections or are user specific preferences.
 * Disable face detection
 * Disable GeoIP lookup on your address to set default search engine region [ [1](https://trac.torproject.org/projects/tor/ticket/16254) [2](https://support.mozilla.org/en-US/kb/how-stop-firefox-making-automatic-connections#w_geolocation-for-default-search-engine) ]
 * Set Accept-Language HTTP header to en-US regardless of Firefox localization [ [1](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept-Language) ]
-* Don't use OS values to determine locale, force using Firefox locale setting [ [1](http://kb.mozillazine.org/Intl.locale.matchOS) ]
 * Don't use Mozilla-provided location-specific search engines
 * Do not automatically send selection to clipboard on some Linux platforms [ [1](http://kb.mozillazine.org/Clipboard.autocopy) ]
 * Prevent leaking application locale/date format using JavaScript [ [1](https://bugzilla.mozilla.org/show_bug.cgi?id=867501) [2](https://hg.mozilla.org/mozilla-central/rev/52d635f2b33d) ]
@@ -213,13 +210,14 @@ Harden preferences related to external plugins
 * Updates addons automatically [ [1](https://blog.mozilla.org/addons/how-to-turn-off-add-on-updates/) ]
 * Enable add-on and certificate blocklists (OneCRL) from Mozilla [ [1](https://wiki.mozilla.org/Blocklisting) [2](https://blocked.cdn.mozilla.net/) [3](http://kb.mozillazine.org/Extensions.blocklist.enabled) [4](http://kb.mozillazine.org/Extensions.blocklist.url) [5](https://blog.mozilla.org/security/2015/03/03/revoking-intermediate-certificates-introducing-onecrl/) ]
 * Decrease system information leakage to Mozilla blocklist update servers [ [1](https://trac.torproject.org/projects/tor/ticket/16931) ]
+* Disable system add-on updates (hidden & always-enabled add-ons from Mozilla) [ [1](https://firefox-source-docs.mozilla.org/toolkit/mozapps/extensions/addon-manager/SystemAddons.html) [2](https://blog.mozilla.org/data/2018/08/20/effectively-measuring-search-in-firefox/) [3](https://github.com/pyllyukko/user.js/issues/419) [4](https://dxr.mozilla.org/mozilla-central/source/toolkit/mozapps/extensions/AddonManager.jsm#1248-1257) ]
 
 ### Firefox (anti-)features / components
 
 Disable Firefox integrated metrics/reporting/experiments, disable potentially insecure/invasive/[undesirable](https://en.wikipedia.org/wiki/Feature_creep) features
 * Disable WebIDE [ [1](https://trac.torproject.org/projects/tor/ticket/16222) [2](https://developer.mozilla.org/docs/Tools/WebIDE) ]
 * Disable remote debugging [ [1](https://developer.mozilla.org/en-US/docs/Tools/Remote_Debugging/Debugging_Firefox_Desktop) [2](https://developer.mozilla.org/en-US/docs/Tools/Tools_Toolbox#Advanced_settings) ]
-* Disable Mozilla telemetry/experiments [ [1](https://wiki.mozilla.org/Platform/Features/Telemetry) [2](https://wiki.mozilla.org/Privacy/Reviews/Telemetry) [3](https://wiki.mozilla.org/Telemetry) [4](https://www.mozilla.org/en-US/legal/privacy/firefox.html#telemetry) [5](https://support.mozilla.org/t5/Firefox-crashes/Mozilla-Crash-Reporter/ta-p/1715) [6](https://wiki.mozilla.org/Security/Reviews/Firefox6/ReviewNotes/telemetry) [7](https://gecko.readthedocs.io/en/latest/browser/experiments/experiments/manifest.html) [8](https://wiki.mozilla.org/Telemetry/Experiments) ]
+* Disable Mozilla telemetry/experiments [ [1](https://wiki.mozilla.org/Platform/Features/Telemetry) [2](https://wiki.mozilla.org/Privacy/Reviews/Telemetry) [3](https://wiki.mozilla.org/Telemetry) [4](https://www.mozilla.org/en-US/legal/privacy/firefox.html#telemetry) [5](https://support.mozilla.org/t5/Firefox-crashes/Mozilla-Crash-Reporter/ta-p/1715) [6](https://wiki.mozilla.org/Security/Reviews/Firefox6/ReviewNotes/telemetry) [7](https://gecko.readthedocs.io/en/latest/browser/experiments/experiments/manifest.html) [8](https://wiki.mozilla.org/Telemetry/Experiments) [9](https://support.mozilla.org/en-US/questions/1197144) ]
 * Disallow Necko to do A/B testing [ [1](https://trac.torproject.org/projects/tor/ticket/13170) ]
 * Disable sending Firefox crash reports to Mozilla servers [ [1](https://wiki.mozilla.org/Breakpad) [2](http://kb.mozillazine.org/Breakpad) [3](https://dxr.mozilla.org/mozilla-central/source/toolkit/crashreporter) [4](https://bugzilla.mozilla.org/show_bug.cgi?id=411490) ]
 * Disable sending reports of tab crashes to Mozilla (about:tabcrashed), don't nag user about unsent crash reports [ [1](https://hg.mozilla.org/mozilla-central/file/tip/browser/app/profile/firefox.js) ]
@@ -399,12 +397,12 @@ Additional add-ons that you might consider using or reading about:
 Hardening your often implies a trade-off with ease-of-use and comes with reduced functionality. Here is a list of known problems/limitations:
 
 <!-- BEGIN PROBLEMS-LIMITATIONS -->
-* Disabling ServiceWorkers breaks functionality on some sites (Google Street View...)
 * Disabling Web Workers breaks "Download as ZIP" functionality on https://mega.nz/, WhatsApp Web, upload on https://www.virustotal.com/,  and probably others
 * Disabling clipboard events breaks Ctrl+C/X/V copy/cut/paste functionaility in JS-based web applications (Google Docs...)
 * Disabling clipboard operations will break legitimate JS-based "copy to clipboard" functionality
 * Enabling Mixed Display Content blocking can prevent images/styles... from loading properly when connection to the website is only partially secured
 * Disabling nonessential protocols breaks all interaction with custom protocols such as mailto:, irc:, magnet: ... and breaks opening third-party mail/messaging/torrent/... clients when clicking on links with these protocols
+* Disabling system add-on updates prevents Mozilla from "hotfixing" your browser to patch critical problems (one possible use case from the documentation)
 * Containers are not available in Private Browsing mode
 * Fully automatic updates are disabled and left to package management systems on Linux. Windows users may want to change this setting.
 * Do No Track must be enabled manually
@@ -412,6 +410,8 @@ Hardening your often implies a trade-off with ease-of-use and comes with reduced
 * Spoofing referers breaks visualisation of 3rd-party sites on the Lightbeam addon
 * Spoofing referers disables CSRF protection on some login pages not implementing origin-header/cookie+token based CSRF protection
 * Blocking 3rd-party cookies breaks a number of payment gateways
+* First-party isolation breaks Microsoft Teams
+* First-party isolation causes HTTP basic auth to ask for credentials for every new tab (see #425)
 * .URL shortcut files will be created with a generic icon
 * OCSP leaks your IP and domains you visit to the CA when OCSP Stapling is not available on visited host
 * OCSP is vulnerable to replay attacks when nonce is not configured on the OCSP responder
