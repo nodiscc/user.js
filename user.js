@@ -868,10 +868,10 @@ user_pref("browser.sessionstore.privacy_level",			2);
 // https://bugzilla.mozilla.org/show_bug.cgi?id=238789
 user_pref("browser.helperApps.deleteTempFileOnExit",		true);
 
-// PREF: Do not create screenshots of visited pages (relates to the "new tab page" feature)
+// PREF: Do not create screenshots of visited pages (relates to the "new tab page" feature) (disabled)
 // https://support.mozilla.org/en-US/questions/973320
 // https://developer.mozilla.org/en-US/docs/Mozilla/Preferences/Preference_reference/browser.pagethumbnails.capturing_disabled
-user_pref("browser.pagethumbnails.capturing_disabled",		true);
+//user_pref("browser.pagethumbnails.capturing_disabled",		true);
 
 // PREF: Don't fetch and permanently store favicons for Windows .URL shortcuts created by drag and drop
 // NOTICE: .URL shortcut files will be created with a generic icon
