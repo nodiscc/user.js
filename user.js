@@ -914,12 +914,10 @@ user_pref("browser.download.folderList",			2);
 // https://developer.mozilla.org/en/Download_Manager_preferences (obsolete)
 user_pref("browser.download.useDownloadDir",			false);
 
-// PREF: Disable the "new tab page" feature and show a cutom page instead
+// PREF: Disable the "new tab page" (disabled)
 // https://wiki.mozilla.org/Privacy/Reviews/New_Tab
 // https://support.mozilla.org/en-US/kb/new-tab-page-show-hide-and-customize-top-sites#w_how-do-i-turn-the-new-tab-page-off
-// https://github.com/nodiscc/ohmpage
-user_pref("browser.newtabpage.enabled",				false);
-user_pref("browser.newtab.url",					"/usr/share/ohmpage/index.html");
+//user_pref("browser.newtabpage.enabled",				false);
 
 // PREF: Disable Activity Stream
 // https://wiki.mozilla.org/Firefox/Activity_Stream
