@@ -95,7 +95,7 @@ Copy the produced file to the Firefox installation directory. The file should be
 
 #### Additional installation steps for Windows / OS X / Gentoo / Archlinux
 
-Create `autoconfig.js` in Firefox installation directory, with the following contents:
+Create `local-settings.js` in Firefox installation directory, with the following contents:
 
 ```
 // Important: first line of the file must be a comment
@@ -218,7 +218,7 @@ Disable Firefox integrated metrics/reporting/experiments, disable potentially in
 * Disable Extension recommendations (Firefox >= 65) [ [1](https://support.mozilla.org/en-US/kb/extension-recommendations) ]
 * Disable WebIDE [ [1](https://trac.torproject.org/projects/tor/ticket/16222) [2](https://developer.mozilla.org/docs/Tools/WebIDE) ]
 * Disable remote debugging [ [1](https://developer.mozilla.org/en-US/docs/Tools/Remote_Debugging/Debugging_Firefox_Desktop) [2](https://developer.mozilla.org/en-US/docs/Tools/Tools_Toolbox#Advanced_settings) ]
-* Disable Mozilla telemetry/experiments [ [1](https://wiki.mozilla.org/Platform/Features/Telemetry) [2](https://wiki.mozilla.org/Privacy/Reviews/Telemetry) [3](https://wiki.mozilla.org/Telemetry) [4](https://www.mozilla.org/en-US/legal/privacy/firefox.html#telemetry) [5](https://support.mozilla.org/t5/Firefox-crashes/Mozilla-Crash-Reporter/ta-p/1715) [6](https://wiki.mozilla.org/Security/Reviews/Firefox6/ReviewNotes/telemetry) [7](https://gecko.readthedocs.io/en/latest/browser/experiments/experiments/manifest.html) [8](https://wiki.mozilla.org/Telemetry/Experiments) [9](https://support.mozilla.org/en-US/questions/1197144) ]
+* Disable Mozilla telemetry/experiments [ [1](https://wiki.mozilla.org/Platform/Features/Telemetry) [2](https://wiki.mozilla.org/Privacy/Reviews/Telemetry) [3](https://wiki.mozilla.org/Telemetry) [4](https://www.mozilla.org/en-US/legal/privacy/firefox.html#telemetry) [5](https://support.mozilla.org/t5/Firefox-crashes/Mozilla-Crash-Reporter/ta-p/1715) [6](https://wiki.mozilla.org/Security/Reviews/Firefox6/ReviewNotes/telemetry) [7](https://gecko.readthedocs.io/en/latest/browser/experiments/experiments/manifest.html) [8](https://wiki.mozilla.org/Telemetry/Experiments) [9](https://support.mozilla.org/en-US/questions/1197144) [10](https://firefox-source-docs.mozilla.org/toolkit/components/telemetry/telemetry/internals/preferences.html#id1) ]
 * Disallow Necko to do A/B testing [ [1](https://trac.torproject.org/projects/tor/ticket/13170) ]
 * Disable sending Firefox crash reports to Mozilla servers [ [1](https://wiki.mozilla.org/Breakpad) [2](http://kb.mozillazine.org/Breakpad) [3](https://dxr.mozilla.org/mozilla-central/source/toolkit/crashreporter) [4](https://bugzilla.mozilla.org/show_bug.cgi?id=411490) ]
 * Disable sending reports of tab crashes to Mozilla (about:tabcrashed), don't nag user about unsent crash reports [ [1](https://hg.mozilla.org/mozilla-central/file/tip/browser/app/profile/firefox.js) ]
@@ -291,6 +291,7 @@ Improve visibility of security-related elements, mitigate shoulder-surfing
 * Enable insecure password warnings (login forms in non-HTTPS pages) [ [1](https://blog.mozilla.org/tanvi/2016/01/28/no-more-passwords-over-http-please/) [2](https://bugzilla.mozilla.org/show_bug.cgi?id=1319119) [3](https://bugzilla.mozilla.org/show_bug.cgi?id=1217156) ]
 * Disable Downloading on Desktop
 * Always ask the user where to download [ [1](https://developer.mozilla.org/en/Download_Manager_preferences (obsolete)) ]
+* Disable Snippets [ [1](https://wiki.mozilla.org/Firefox/Projects/Firefox_Start/Snippet_Service) [2](https://support.mozilla.org/en-US/kb/snippets-firefox-faq) ]
 * Disable Activity Stream [ [1](https://wiki.mozilla.org/Firefox/Activity_Stream) ]
 * Disable new tab tile ads & preload [ [1](http://www.thewindowsclub.com/disable-remove-ad-tiles-from-firefox) [2](http://forums.mozillazine.org/viewtopic.php?p=13876331#p13876331) [3](https://wiki.mozilla.org/Tiles/Technical_Documentation#Ping) [4](https://gecko.readthedocs.org/en/latest/browser/browser/DirectoryLinksProvider.html#browser-newtabpage-directory-source) [5](https://gecko.readthedocs.org/en/latest/browser/browser/DirectoryLinksProvider.html#browser-newtabpage-directory-ping) ]
 * Enable Auto Notification of Outdated Plugins (Firefox < 50) [ [1](https://wiki.mozilla.org/Firefox3.6/Plugin_Update_Awareness_Security_Review) ]
@@ -362,7 +363,7 @@ This section tweaks the cipher suites used by Firefox. The idea is to support on
 * If a plugin is absolutely required, [check for plugin updates](https://www.mozilla.org/en-US/plugincheck/)
 * Create different [profiles][15] for different purposes
 * Change the Firefox's built-in tracking protection to use the [strict list](https://support.mozilla.org/en-US/kb/tracking-protection-pbm?as=u#w_change-your-block-list)
-* Change the timezone for Firefox by using the ```TZ``` environment variable (see [here](https://wiki.archlinux.org/index.php/Firefox_privacy#Change_browser_time_zone)) to reduce it's value in browser fingerprinting
+* Change the timezone for Firefox by using the `TZ` environment variable (see [here](https://wiki.archlinux.org/index.php/Firefox_privacy#Change_browser_time_zone)) to reduce it's value in browser fingerprinting
 * If you are concerned about more advanced threats, use specialized hardened operating systems and browsers such as [Tails](https://tails.boum.org/) or [Tor Brower Bundle](https://www.torproject.org/projects/torbrowser.html.en)
 
 
@@ -497,7 +498,6 @@ For more information, see [CONTRIBUTING](https://github.com/pyllyukko/user.js/bl
 * [Battery API](https://robnyman.github.io/battery/) [[1](https://pstadler.sh/battery.js/)]
 * [WebRTC LAN address leak test](http://net.ipcalf.com/)
 * [IP Check](http://ip-check.info/?lang=en)
-* [Intermediate CA fingerprinting test](https://fiprinca.0x90.eu/poc/)
 * [OONI Internet censorship tests](https://ooni.torproject.org/nettest/)
 
 #### SSL tests
@@ -536,16 +536,18 @@ For more information, see [CONTRIBUTING](https://github.com/pyllyukko/user.js/bl
 * [Mozilla Firefox Release Plan](https://wiki.mozilla.org/RapidRelease/Calendar)
 * [Mozilla Firefox developer release notes](https://developer.mozilla.org/en-US/Firefox/Releases)
 * [Advices from Mozilla Firefox on privacy and government surveillance](https://www.mozilla.org/en-US/teach/smarton/surveillance/)
-* [Polaris - advance privacy technnology for the web](https://wiki.mozilla.org/Polaris)
+* [Polaris - advance privacy technology for the web](https://wiki.mozilla.org/Polaris)
 * [Mozilla Privacy Principles](https://wiki.mozilla.org/Privacy/Principles)
 * [List of Firefox "about:" URLs](https://developer.mozilla.org/en-US/Firefox/The_about_protocol)
 * [Policy Templates for Firefox](https://github.com/mozilla/policy-templates)
+* [A brief guide to Mozilla preferences](https://developer.mozilla.org/en-US/docs/Mozilla/Preferences/A_brief_guide_to_Mozilla_preferences)
 * [Mozilla preferences for uber-geeks](https://developer.mozilla.org/en-US/docs/Mozilla/Preferences/Mozilla_preferences_for_uber-geeks)
 * [Privacy & Security related add-ons](https://addons.mozilla.org/firefox/extensions/privacy-security/) ([RSS](https://addons.mozilla.org/en-US/firefox/extensions/privacy-security/format:rss?sort=featured))
 * [Customizing Firefox using AutoConfig](https://support.mozilla.org/en-US/kb/customizing-firefox-using-autoconfig)
 
 #### Other documentation
 
+* **[User.js comparator](https://jm42.github.io/compare-user.js/)**
 * **[CVEs for Firefox - mitre.org](https://cve.mitre.org/cgi-bin/cvekey.cgi?keyword=firefox)**
 * [CVEs for Firefox - cvedetails.com](https://www.cvedetails.com/vulnerability-list/vendor_id-452/product_id-3264/Mozilla-Firefox.html)
 * [ghacksuserjs/ghacks-user.js](https://github.com/ghacksuserjs/ghacks-user.js): a similar project and great source of information, with different goals and methodology

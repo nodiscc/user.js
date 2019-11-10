@@ -485,6 +485,7 @@ user_pref("devtools.debugger.force-local",			true);
 // https://gecko.readthedocs.io/en/latest/browser/experiments/experiments/manifest.html
 // https://wiki.mozilla.org/Telemetry/Experiments
 // https://support.mozilla.org/en-US/questions/1197144
+// https://firefox-source-docs.mozilla.org/toolkit/components/telemetry/telemetry/internals/preferences.html#id1
 user_pref("toolkit.telemetry.enabled",				false);
 user_pref("toolkit.telemetry.unified",				false);
 user_pref("toolkit.telemetry.archive.enabled",			false);
@@ -553,6 +554,8 @@ user_pref("pdfjs.disabled",					true);
 user_pref("datareporting.healthreport.uploadEnabled",		false);
 user_pref("datareporting.healthreport.service.enabled",		false);
 user_pref("datareporting.policy.dataSubmissionEnabled",		false);
+// "Allow Firefox to make personalized extension recommendations"
+user_pref("browser.discovery.enabled",				false);
 
 // PREF: Disable Heartbeat  (Mozilla user rating telemetry)
 // https://wiki.mozilla.org/Advocacy/heartbeat
@@ -918,6 +921,11 @@ user_pref("browser.download.useDownloadDir",			false);
 // https://wiki.mozilla.org/Privacy/Reviews/New_Tab
 // https://support.mozilla.org/en-US/kb/new-tab-page-show-hide-and-customize-top-sites#w_how-do-i-turn-the-new-tab-page-off
 //user_pref("browser.newtabpage.enabled",				false);
+
+// PREF: Disable Snippets
+// https://wiki.mozilla.org/Firefox/Projects/Firefox_Start/Snippet_Service
+// https://support.mozilla.org/en-US/kb/snippets-firefox-faq
+user_pref("browser.newtabpage.activity-stream.feeds.snippets",	false);
 
 // PREF: Disable Activity Stream
 // https://wiki.mozilla.org/Firefox/Activity_Stream
