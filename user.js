@@ -1304,3 +1304,7 @@ user_pref("general.smoothScroll.pages", false);
 // PREF: set fallback font to workaround the default serif showing incorrect characters for some icon fonts
 // https://github.com/pyllyukko/user.js/pull/300
 user_pref("font.name.serif.x-western",					"sans-serif");
+
+// PREF: use french locale in user interface
+// https://blog.mozilla.org/l10n/2019/04/02/changing-the-language-of-firefox-directly-from-the-browser/
+user_pref("intl.locale.requested",				"fr");
