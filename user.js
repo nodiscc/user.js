@@ -1308,3 +1308,7 @@ user_pref("font.name.serif.x-western",					"sans-serif");
 // PREF: use french locale in user interface
 // https://blog.mozilla.org/l10n/2019/04/02/changing-the-language-of-firefox-directly-from-the-browser/
 user_pref("intl.locale.requested",				"fr");
+
+// PREF: use custom default UI layout:
+// No useless separators, show search bar, addons buttons in personal toolbar
+user_pref("browser.uiCustomization.state", "{\"placements\":{\"widget-overflow-fixed-list\":[\"feed-button\",\"containers-panelmenu\"],\"nav-bar\":[\"back-button\",\"forward-button\",\"stop-reload-button\",\"home-button\",\"urlbar-container\",\"search-container\",\"downloads-button\",\"library-button\",\"sidebar-button\"],\"toolbar-menubar\":[\"menubar-items\"],\"TabsToolbar\":[\"tabbrowser-tabs\",\"new-tab-button\",\"alltabs-button\"],\"PersonalToolbar\":[\"personal-bookmarks\",\"keepassxc-browser_keepassxc_org-browser-action\",\"https-everywhere-eff_eff_org-browser-action\",\"ublock0_raymondhill_net-browser-action\",\"cookieautodelete_kennydo_com-browser-action\",\"https-everywhere_eff_org-browser-action\"]},\"seen\":[\"cookieautodelete_kennydo_com-browser-action\",\"https-everywhere_eff_org-browser-action\",\"ublock0_raymondhill_net-browser-action\",\"developer-button\",\"https-everywhere-eff_eff_org-browser-action\",\"keepassxc-browser_keepassxc_org-browser-action\"],\"dirtyAreaCache\":[\"PersonalToolbar\",\"nav-bar\",\"TabsToolbar\",\"toolbar-menubar\",\"PanelUI-contents\",\"widget-overflow-fixed-list\"],\"currentVersion\":16,\"newElementCount\":5}");
