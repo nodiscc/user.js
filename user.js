@@ -941,7 +941,7 @@ user_pref("browser.newtabpage.activity-stream.feeds.snippets",	false);
 
 // PREF: Disable Activity Stream
 // https://wiki.mozilla.org/Firefox/Activity_Stream
-user_pref("browser.newtabpage.activity-stream.enabled",		false);
+// user_pref("browser.newtabpage.activity-stream.enabled",		false);
 
 // PREF: Disable new tab tile ads & preload
 // http://www.thewindowsclub.com/disable-remove-ad-tiles-from-firefox
