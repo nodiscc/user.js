@@ -1248,16 +1248,7 @@ user_pref("extensions.ui.lastCategory", "addons://list/extension");
 // PREF: Show new search bar menu (UI)
 user_pref("browser.search.showOneOffButtons", true);
 
-// PREF: Set the default buttons/UI layout (addons in personal toolbar) (UI)
-user_pref("browser.uiCustomization.state", "{\"placements\":{\"PanelUI-contents\":[\"edit-controls\",\"zoom-controls\",\"new-window-button\",\"privatebrowsing-button\",\"save-page-button\",\"print-button\",\"history-panelmenu\",\"fullscreen-button\",\"find-button\",\"preferences-button\",\"add-ons-button\",\"feed-button\",\"containers-panelmenu\",\"sync-button\"],\"addon-bar\":[\"addonbar-closebutton\",\"status-bar\"],\"PersonalToolbar\":[\"personal-bookmarks\",\"ublock0_raymondhill_net-browser-action\",\"cookieautodelete_kennydo_com-browser-action\",\"https-everywhere_eff_org-browser-action\"],\"nav-bar\":[\"urlbar-container\",\"bookmarks-menu-button\",\"search-container\",\"downloads-button\"],\"TabsToolbar\":[\"tabbrowser-tabs\",\"new-tab-button\",\"alltabs-button\"],\"toolbar-menubar\":[\"menubar-items\"]},\"seen\":[\"cookieautodelete_kennydo_com-browser-action\",\"https-everywhere_eff_org-browser-action\",\"ublock0_raymondhill_net-browser-action\",\"developer-button\"],\"dirtyAreaCache\":[\"PersonalToolbar\",\"nav-bar\",\"TabsToolbar\",\"toolbar-menubar\",\"PanelUI-contents\"],\"currentVersion\":6,\"newElementCount\":0}");
-
-// PREF: Disable CanvasBlocker notifications (UI, addons)
-user_pref("extensions.CanvasBlocker@kkapsner.de.showNotifications", false);
-
-// PREF: Disable sending metrics to greasemonkey servers (addons) (disabled)
-//user_pref("extensions.greasemonkey.stats.prompted", true);
-
-// PREF: Allow addon installation from user's profile directory (TODO insecure, workaround for unattended addons setup)
+// PREF: Allow addon installation from user's profile directory
 // http://kb.mozillazine.org/About:config_entries#Extensions.
 user_pref("extensions.autoDisableScopes", 0);
 user_pref("extensions.enabledScopes", 15);
