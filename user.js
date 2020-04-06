@@ -1232,10 +1232,6 @@ user_pref("browser.rights.3.shown", false);
 // PREF: Disable MAF addon welcome page (UI, addons) (disabled)
 //user_pref("extensions.maf.other.displaywelcomepage", false);
 
-// PREF: Use custom startup homepage instead of about:home (UI)
-// https://github.com/nodiscc/ohmpage
-user_pref("browser.startup.homepage", "/usr/share/ohmpage/index.html");
-
 // PREF: Suppress Firefox Accounts "Welcome" page/"What's new" page after upgrades (UI, usability), show the new tab page
 // https://github.com/nodiscc/ohmpage
 user_pref("startup.homepage_welcome_url", "");
