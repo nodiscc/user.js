@@ -725,7 +725,7 @@ user_pref("security.sri.enable",				true);
 // NOTICE: Spoofing referers breaks visualisation of 3rd-party sites on the Lightbeam addon
 // NOTICE: Spoofing referers disables CSRF protection on some login pages not implementing origin-header/cookie+token based CSRF protection
 // TODO: https://github.com/pyllyukko/user.js/issues/94, commented-out XOriginPolicy/XOriginTrimmingPolicy = 2 prefs
-user_pref("network.http.referer.spoofSource",			true);
+// user_pref("network.http.referer.spoofSource",			true);
 
 // PREF: Don't send referer headers when following links across different domains (disabled)
 // https://github.com/pyllyukko/user.js/issues/227
