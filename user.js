@@ -832,7 +832,7 @@ user_pref("browser.formfill.enable",				false);
 
 // PREF: Cookies expires at the end of the session (when the browser closes)
 // http://kb.mozillazine.org/Network.cookie.lifetimePolicy#2
-user_pref("network.cookie.lifetimePolicy",			2);
+// user_pref("network.cookie.lifetimePolicy",			2);
 
 // PREF: Require manual intervention to autofill known username/passwords sign-in forms
 // http://kb.mozillazine.org/Signon.autofillForms
