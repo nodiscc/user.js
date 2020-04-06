@@ -868,6 +868,17 @@ user_pref("browser.formfill.expire_days",			0);
 // NOTE: CIS says 1, we use 2
 user_pref("browser.sessionstore.privacy_level",			2);
 
+// PREF: Don't promote Firefox Sync
+user_pref("browser.syncPromoViewsLeftMap", "{\"addons\":0, \"passwords\":0, \"bookmarks\":0}");
+
+// PREF: Disblae Firefox Sync by default
+user_pref("identity.fxaccounts.enabled", false);
+
+// PREF: Never sync prefs, addons, or tabs with other browsers
+user_pref("services.sync.engine.prefs", false);
+user_pref("services.sync.engine.addons", false);
+user_pref("services.sync.engine.tabs", false);
+
 // PREF: Delete temporary files on exit
 // https://bugzilla.mozilla.org/show_bug.cgi?id=238789
 user_pref("browser.helperApps.deleteTempFileOnExit",		true);
