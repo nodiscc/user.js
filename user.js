@@ -1250,8 +1250,8 @@ user_pref("browser.search.showOneOffButtons", true);
 
 // PREF: Allow addon installation from user's profile directory
 // http://kb.mozillazine.org/About:config_entries#Extensions.
-user_pref("extensions.autoDisableScopes", 0);
-user_pref("extensions.enabledScopes", 15);
+// user_pref("extensions.autoDisableScopes", 0);
+// user_pref("extensions.enabledScopes", 15);
 
 // Disable HTTPS Everywhere observatory (addons)
 // user_pref("extensions.https_everywhere._observatory.enabled", false);
