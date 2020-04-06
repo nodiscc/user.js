@@ -89,10 +89,10 @@ user_pref("media.peerconnection.ice.no_host",			true); // Firefox >= 52
 // https://wiki.mozilla.org/Media/getUserMedia
 // https://blog.mozilla.org/futurereleases/2013/01/12/capture-local-camera-and-microphone-streams-with-getusermedia-now-enabled-in-firefox/
 // https://developer.mozilla.org/en-US/docs/Web/API/Navigator
-user_pref("media.navigator.enabled",				false);
-user_pref("media.navigator.video.enabled",			false);
-user_pref("media.getusermedia.screensharing.enabled",		false);
-user_pref("media.getusermedia.audiocapture.enabled",		false);
+// user_pref("media.navigator.enabled",				false);
+// user_pref("media.navigator.video.enabled",			false);
+// user_pref("media.getusermedia.screensharing.enabled",		false);
+// user_pref("media.getusermedia.audiocapture.enabled",		false);
 
 // PREF: Disable battery API (Firefox < 52)
 // https://developer.mozilla.org/en-US/docs/Web/API/BatteryManager
