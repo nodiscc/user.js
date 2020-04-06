@@ -893,9 +893,9 @@ user_pref("browser.helperApps.deleteTempFileOnExit",		true);
 // Favicons are stored as .ico files in $profile_dir\shortcutCache
 user_pref("browser.shell.shortcutFavicons",					false);
 
-// PREF: Disable bookmarks backups (default: 15)
+// PREF: Limi bookmarks backups to 1 (default: 15)
 // http://kb.mozillazine.org/Browser.bookmarks.max_backups
-user_pref("browser.bookmarks.max_backups", 0);
+user_pref("browser.bookmarks.max_backups", 1);
 
 // PREF: Export bookmarks to HTML automatically when closing Firefox (disabled)
 // https://support.mozilla.org/en-US/questions/1176242
