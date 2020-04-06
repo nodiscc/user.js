@@ -301,13 +301,13 @@ user_pref("browser.urlbar.filter.javascript",			true);
 // PREF: Disable SVG in OpenType fonts
 // https://wiki.mozilla.org/SVGOpenTypeFonts
 // https://github.com/iSECPartners/publications/tree/master/reports/Tor%20Browser%20Bundle
-user_pref("gfx.font_rendering.opentype_svg.enabled",		false);
+// user_pref("gfx.font_rendering.opentype_svg.enabled",		false);
 
 // PREF: Disable in-content SVG rendering (Firefox >= 53) (disabled)
 // NOTICE-DISABLED: Disabling SVG support breaks many UI elements on many sites
 // https://bugzilla.mozilla.org/show_bug.cgi?id=1216893
 // https://github.com/iSECPartners/publications/raw/master/reports/Tor%20Browser%20Bundle/Tor%20Browser%20Bundle%20-%20iSEC%20Deliverable%201.3.pdf#16
-//user_pref("svg.disabled", true);
+// user_pref("svg.disabled", true);
 
 
 // PREF: Disable video stats to reduce fingerprinting threat
@@ -316,10 +316,10 @@ user_pref("gfx.font_rendering.opentype_svg.enabled",		false);
 // https://github.com/pyllyukko/user.js/issues/9#issuecomment-148922065
 user_pref("media.video_stats.enabled",				false);
 
-// PREF: Don't reveal build ID
+// DEPRECATED: Don't reveal build ID
 // Value taken from Tor Browser
 // https://bugzilla.mozilla.org/show_bug.cgi?id=583181
-user_pref("general.buildID.override",				"20100101");
+// user_pref("general.buildID.override",				"20100101");
 
 // PREF: Don't use document specified fonts to prevent installed font enumeration (fingerprinting) (disabled)
 // NOTICE-DISABLED: Disabling document specified fonts breaks uBlock Origin's user intereface icons
