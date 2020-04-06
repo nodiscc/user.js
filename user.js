@@ -342,31 +342,31 @@ user_pref("media.video_stats.enabled",				false);
 //   * true, if the protocol should be handled by an external application
 //   * false, if the protocol should be handled internally by Firefox
 user_pref("network.protocol-handler.warn-external-default",	true);
-user_pref("network.protocol-handler.external.http",		false);
-user_pref("network.protocol-handler.external.https",		false);
-user_pref("network.protocol-handler.external.javascript",	false);
-user_pref("network.protocol-handler.external.moz-extension",	false);
-user_pref("network.protocol-handler.external.ftp",		false);
-user_pref("network.protocol-handler.external.file",		false);
-user_pref("network.protocol-handler.external.about",		false);
-user_pref("network.protocol-handler.external.chrome",		false);
-user_pref("network.protocol-handler.external.blob",		false);
-user_pref("network.protocol-handler.external.data",		false);
-user_pref("network.protocol-handler.external.magnet",		true);
-user_pref("network.protocol-handler.external.mailto",		true);
-user_pref("network.protocol-handler.expose-all",		false);
-user_pref("network.protocol-handler.expose.http",		true);
-user_pref("network.protocol-handler.expose.https",		true);
-user_pref("network.protocol-handler.expose.javascript",		true);
-user_pref("network.protocol-handler.expose.moz-extension",	true);
-user_pref("network.protocol-handler.expose.ftp",		true);
-user_pref("network.protocol-handler.expose.file",		true);
-user_pref("network.protocol-handler.expose.about",		true);
-user_pref("network.protocol-handler.expose.chrome",		true);
-user_pref("network.protocol-handler.expose.blob",		true);
-user_pref("network.protocol-handler.expose.data",		true);
-user_pref("network.protocol-handler.expose.magnet",		true);
-user_pref("network.protocol-handler.expose.mailto",		true);
+// user_pref("network.protocol-handler.external.http",		false);
+// user_pref("network.protocol-handler.external.https",		false);
+// user_pref("network.protocol-handler.external.javascript",	false);
+// user_pref("network.protocol-handler.external.moz-extension",	false);
+// user_pref("network.protocol-handler.external.ftp",		false);
+// user_pref("network.protocol-handler.external.file",		false);
+// user_pref("network.protocol-handler.external.about",		false);
+// user_pref("network.protocol-handler.external.chrome",		false);
+// user_pref("network.protocol-handler.external.blob",		false);
+// user_pref("network.protocol-handler.external.data",		false);
+// user_pref("network.protocol-handler.external.magnet",		true);
+// user_pref("network.protocol-handler.external.mailto",		true);
+// user_pref("network.protocol-handler.expose-all",		false);
+// user_pref("network.protocol-handler.expose.http",		true);
+// user_pref("network.protocol-handler.expose.https",		true);
+// user_pref("network.protocol-handler.expose.javascript",		true);
+// user_pref("network.protocol-handler.expose.moz-extension",	true);
+// user_pref("network.protocol-handler.expose.ftp",		true);
+// user_pref("network.protocol-handler.expose.file",		true);
+// user_pref("network.protocol-handler.expose.about",		true);
+// user_pref("network.protocol-handler.expose.chrome",		true);
+// user_pref("network.protocol-handler.expose.blob",		true);
+// user_pref("network.protocol-handler.expose.data",		true);
+// user_pref("network.protocol-handler.expose.magnet",		true);
+// user_pref("network.protocol-handler.expose.mailto",		true);
 
 /******************************************************************************
  * SECTION: Extensions / plugins                                                       *
