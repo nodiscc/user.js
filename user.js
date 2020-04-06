@@ -991,8 +991,8 @@ user_pref("browser.shell.checkDefaultBrowser",			false);
 // CIS Version 1.2.0 October 21st, 2011 2.5.3 Disable Prompting for Credential Storage
 user_pref("security.ask_for_password",				2);
 
-// PREF: Lock the password storage every 1 minutes (default: 30)
-user_pref("security.password_lifetime",				1);
+// PREF: Lock the password storage every 5 minutes (default: 30)
+user_pref("security.password_lifetime",				5);
 
 // PREF: Display a notification bar when websites offer data for offline use
 // http://kb.mozillazine.org/Browser.offline-apps.notify
