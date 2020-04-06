@@ -1236,11 +1236,11 @@ user_pref("browser.rights.3.shown", false);
 // https://github.com/nodiscc/ohmpage
 user_pref("browser.startup.homepage", "/usr/share/ohmpage/index.html");
 
-// PREF: Suppress Firefox Accounts "Welcome" page/"What's new" page after upgrades (UI, usability), show a custom page instead
+// PREF: Suppress Firefox Accounts "Welcome" page/"What's new" page after upgrades (UI, usability), show the new tab page
 // https://github.com/nodiscc/ohmpage
 user_pref("startup.homepage_welcome_url", "");
 user_pref("startup.homepage_welcome_url.additional", "");
-user_pref("startup.homepage_override_url", "/usr/share/ohmpage/index.html");
+user_pref("startup.homepage_override_url", "about:newtab");
 
 // PREF: Display installed addons list by default in about:addons (instead of AMO homepage) (UI)
 user_pref("extensions.ui.lastCategory", "addons://list/extension");
