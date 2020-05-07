@@ -1,3 +1,4 @@
+//
 /******************************************************************************
  * user.js                                                                    *
  * https://github.com/pyllyukko/user.js                                       *
@@ -7,24 +8,18 @@
  * SECTION: HTML5 / APIs / DOM                                                *
  ******************************************************************************/
 
-// PREF: Disable Service Workers (disabled)
+// PREF: Disable Service Workers
 // https://developer.mozilla.org/en-US/docs/Web/API/Worker
 // https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorker_API
 // https://wiki.mozilla.org/Firefox/Push_Notifications#Service_Workers
-// NOTICE-DISABLED: Disabling ServiceWorkers breaks functionality on some sites (Google Street View...)
+// NOTICE: Disabling ServiceWorkers breaks functionality on some sites (Google Street View...)
 // Unknown security implications
 // CVE-2016-5259, CVE-2016-2812, CVE-2016-1949, CVE-2016-5287 (fixed)
-//user_pref("dom.serviceWorkers.enabled",				false);
-
-// PREF: Disable Web Workers (disabled)
-// https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Using_web_workers
-// https://www.w3schools.com/html/html5_webworkers.asp
-// NOTICE: Disabling Web Workers breaks "Download as ZIP" functionality on https://mega.nz/, WhatsApp Web, upload on https://www.virustotal.com/,  and probably others
-//user_pref("dom.workers.enabled",					false);
+user_pref("dom.serviceWorkers.enabled",				false);
 
 // PREF: Disable web notifications
 // https://support.mozilla.org/en-US/questions/1140439
-// user_pref("dom.webnotifications.enabled",			false);
+user_pref("dom.webnotifications.enabled",			false);
 
 // PREF: Disable DOM timing API
 // https://wiki.mozilla.org/Security/Reviews/Firefox/NavigationTimingAPI
@@ -36,13 +31,13 @@ user_pref("dom.enable_performance",				false);
 // https://www.w3.org/TR/2013/REC-user-timing-20131212/#privacy-security
 user_pref("dom.enable_user_timing",				false);
 
-// PREF: Disable Web Audio API (disabled)
+// PREF: Disable Web Audio API
 // https://bugzilla.mozilla.org/show_bug.cgi?id=1288359
-//user_pref("dom.webaudio.enabled",				false);
+user_pref("dom.webaudio.enabled",				false);
 
-// PREF: Disable Location-Aware Browsing (geolocation) (fully opt-in) (disabled)
+// PREF: Disable Location-Aware Browsing (geolocation)
 // https://www.mozilla.org/en-US/firefox/geolocation/
-//user_pref("geo.enabled",					false);
+user_pref("geo.enabled",					false);
 
 // PREF: When geolocation is enabled, use Mozilla geolocation service instead of Google
 // https://bugzilla.mozilla.org/show_bug.cgi?id=689252
@@ -75,9 +70,9 @@ user_pref("dom.netinfo.enabled",				false);
 // https://www.torproject.org/projects/torbrowser/design/#fingerprinting-defenses
 user_pref("dom.network.enabled",				false);
 
-// PREF: Disable WebRTC entirely to prevent leaking internal IP addresses (Firefox < 42) (disabled)
-// NOTICE-DISABLED: Disabling WebRTC breaks peer-to-peer file sharing tools (reep.io ...)
-// user_pref("media.peerconnection.enabled",			false);
+// PREF: Disable WebRTC entirely to prevent leaking internal IP addresses (Firefox < 42)
+// NOTICE: Disabling WebRTC breaks peer-to-peer file sharing tools (reep.io ...)
+user_pref("media.peerconnection.enabled",			false);
 
 // PREF: Don't reveal your internal IP when WebRTC is enabled (Firefox >= 42)
 // https://wiki.mozilla.org/Media/WebRTC/Privacy
@@ -89,10 +84,10 @@ user_pref("media.peerconnection.ice.no_host",			true); // Firefox >= 52
 // https://wiki.mozilla.org/Media/getUserMedia
 // https://blog.mozilla.org/futurereleases/2013/01/12/capture-local-camera-and-microphone-streams-with-getusermedia-now-enabled-in-firefox/
 // https://developer.mozilla.org/en-US/docs/Web/API/Navigator
-// user_pref("media.navigator.enabled",				false);
-// user_pref("media.navigator.video.enabled",			false);
-// user_pref("media.getusermedia.screensharing.enabled",		false);
-// user_pref("media.getusermedia.audiocapture.enabled",		false);
+user_pref("media.navigator.enabled",				false);
+user_pref("media.navigator.video.enabled",			false);
+user_pref("media.getusermedia.screensharing.enabled",		false);
+user_pref("media.getusermedia.audiocapture.enabled",		false);
 
 // PREF: Disable battery API (Firefox < 52)
 // https://developer.mozilla.org/en-US/docs/Web/API/BatteryManager
@@ -112,10 +107,10 @@ user_pref("beacon.enabled",					false);
 // https://developer.mozilla.org/en-US/docs/Mozilla/Preferences/Preference_reference/dom.event.clipboardevents.enabled
 user_pref("dom.event.clipboardevents.enabled",			false);
 
-// PREF: Disable "copy to clipboard" functionality via Javascript (Firefox >= 41) (disabled)
+// PREF: Disable "copy to clipboard" functionality via Javascript (Firefox >= 41)
 // NOTICE: Disabling clipboard operations will break legitimate JS-based "copy to clipboard" functionality
 // https://hg.mozilla.org/mozilla-central/rev/2f9f8ea4b9c3
-// user_pref("dom.allow_cut_copy", false);
+user_pref("dom.allow_cut_copy", false);
 
 // PREF: Disable speech recognition
 // https://dvcs.w3.org/hg/speech-api/raw-file/tip/speechapi.html
@@ -172,22 +167,18 @@ user_pref("dom.enable_resource_timing",				false);
 // https://bugzilla.mozilla.org/show_bug.cgi?id=1342361
 user_pref("dom.archivereader.enabled",				false);
 
-// PREF: Disable webGL (disabled)
+// PREF: Disable webGL
 // https://en.wikipedia.org/wiki/WebGL
 // https://www.contextis.com/resources/blog/webgl-new-dimension-browser-exploitation/
-// user_pref("webgl.disabled",					true);
-
-// PREF: When webGL is enabled, use the minimum capability mode (disabled)
-// user_pref("webgl.min_capability_mode",				true);
-
-// PREF: When webGL is enabled, disable webGL extensions (disabled)
+user_pref("webgl.disabled",					true);
+// PREF: When webGL is enabled, use the minimum capability mode
+user_pref("webgl.min_capability_mode",				true);
+// PREF: When webGL is enabled, disable webGL extensions
 // https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API#WebGL_debugging_and_testing
-//user_pref("webgl.disable-extensions",				true);
-
-// PREF: When webGL is enabled, force enabling it even when layer acceleration is not supported (disabled)
+user_pref("webgl.disable-extensions",				true);
+// PREF: When webGL is enabled, force enabling it even when layer acceleration is not supported
 // https://trac.torproject.org/projects/tor/ticket/18603
-// user_pref("webgl.disable-fail-if-major-performance-caveat",	true);
-
+user_pref("webgl.disable-fail-if-major-performance-caveat",	true);
 // PREF: When webGL is enabled, do not expose information about the graphics driver
 // https://bugzilla.mozilla.org/show_bug.cgi?id=1171228
 // https://developer.mozilla.org/en-US/docs/Web/API/WEBGL_debug_renderer_info
@@ -201,7 +192,10 @@ user_pref("webgl.enable-debug-renderer-info",			false);
 user_pref("dom.maxHardwareConcurrency",				2);
 
 // PREF: Disable WebAssembly
-//user_pref("javascript.options.wasm",				false);
+// https://webassembly.org/
+// https://en.wikipedia.org/wiki/WebAssembly
+// https://trac.torproject.org/projects/tor/ticket/21549
+user_pref("javascript.options.wasm",				false);
 
 /******************************************************************************
  * SECTION: Misc                                                              *
@@ -221,9 +215,9 @@ user_pref("browser.search.geoip.url",				"");
 // https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept-Language
 user_pref("intl.accept_languages",				"en-US, en");
 
-// PREF: Don't use OS values to determine locale, force using Firefox locale setting (disabled)
+// PREF: Don't use OS values to determine locale, force using Firefox locale setting
 // http://kb.mozillazine.org/Intl.locale.matchOS
-user_pref("intl.locale.matchOS",				true);
+user_pref("intl.locale.matchOS",				false);
 
 // PREF: Don't use Mozilla-provided location-specific search engines
 user_pref("browser.search.geoSpecificDefaults",			false);
@@ -237,9 +231,9 @@ user_pref("clipboard.autocopy",					false);
 // https://hg.mozilla.org/mozilla-central/rev/52d635f2b33d
 user_pref("javascript.use_us_english_locale",			true);
 
-// PREF: Do not submit invalid URIs entered in the address bar to the default search engine (disabled)
+// PREF: Do not submit invalid URIs entered in the address bar to the default search engine
 // http://kb.mozillazine.org/Keyword.enabled
-//user_pref("keyword.enabled",					false);
+user_pref("keyword.enabled",					false);
 
 // PREF: Don't trim HTTP off of URLs in the address bar.
 // https://bugzilla.mozilla.org/show_bug.cgi?id=665580
@@ -269,7 +263,7 @@ user_pref("security.mixed_content.block_active_content",	true);
 
 // PREF: Enforce Mixed Passive Content blocking (a.k.a. Mixed Display Content)
 // NOTICE: Enabling Mixed Display Content blocking can prevent images/styles... from loading properly when connection to the website is only partially secured
-// user_pref("security.mixed_content.block_display_content",	true);
+user_pref("security.mixed_content.block_display_content",	true);
 
 // PREF: Disable JAR from opening Unsafe File Types
 // http://kb.mozillazine.org/Network.jar.open-unsafe-types
@@ -290,24 +284,23 @@ user_pref("security.fileuri.strict_origin_policy",		true);
 // CIS 2.3.6 
 user_pref("browser.urlbar.filter.javascript",			true);
 
-// PREF: Disable asm.js (disabled)
+// PREF: Disable asm.js
 // http://asmjs.org/
 // https://www.mozilla.org/en-US/security/advisories/mfsa2015-29/
 // https://www.mozilla.org/en-US/security/advisories/mfsa2015-50/
 // https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-2712
-// NOTICE-DISABLED: Fixed in Firefox 36, disabling harms performance
-//user_pref("javascript.options.asmjs",				false);
+user_pref("javascript.options.asmjs",				false);
 
 // PREF: Disable SVG in OpenType fonts
 // https://wiki.mozilla.org/SVGOpenTypeFonts
 // https://github.com/iSECPartners/publications/tree/master/reports/Tor%20Browser%20Bundle
-// user_pref("gfx.font_rendering.opentype_svg.enabled",		false);
+user_pref("gfx.font_rendering.opentype_svg.enabled",		false);
 
 // PREF: Disable in-content SVG rendering (Firefox >= 53) (disabled)
 // NOTICE-DISABLED: Disabling SVG support breaks many UI elements on many sites
 // https://bugzilla.mozilla.org/show_bug.cgi?id=1216893
 // https://github.com/iSECPartners/publications/raw/master/reports/Tor%20Browser%20Bundle/Tor%20Browser%20Bundle%20-%20iSEC%20Deliverable%201.3.pdf#16
-// user_pref("svg.disabled", true);
+//user_pref("svg.disabled", true);
 
 
 // PREF: Disable video stats to reduce fingerprinting threat
@@ -316,17 +309,16 @@ user_pref("browser.urlbar.filter.javascript",			true);
 // https://github.com/pyllyukko/user.js/issues/9#issuecomment-148922065
 user_pref("media.video_stats.enabled",				false);
 
-// DEPRECATED: Don't reveal build ID
+// PREF: Don't reveal build ID
 // Value taken from Tor Browser
 // https://bugzilla.mozilla.org/show_bug.cgi?id=583181
-// user_pref("general.buildID.override",				"20100101");
+user_pref("general.buildID.override",				"20100101");
+user_pref("browser.startup.homepage_override.buildID",		"20100101");
 
-// PREF: Don't use document specified fonts to prevent installed font enumeration (fingerprinting) (disabled)
-// NOTICE-DISABLED: Disabling document specified fonts breaks uBlock Origin's user intereface icons
-// https://github.com/pyllyukko/user.js/issues/395
+// PREF: Prevent font fingerprinting
 // https://browserleaks.com/fonts
 // https://github.com/pyllyukko/user.js/issues/120
-// user_pref("browser.display.use_document_fonts",			0);
+user_pref("browser.display.use_document_fonts",			0);
 
 // PREF: Enable only whitelisted URL protocol handlers
 // http://kb.mozillazine.org/Network.protocol-handler.external-default
@@ -342,31 +334,27 @@ user_pref("media.video_stats.enabled",				false);
 //   * true, if the protocol should be handled by an external application
 //   * false, if the protocol should be handled internally by Firefox
 user_pref("network.protocol-handler.warn-external-default",	true);
-// user_pref("network.protocol-handler.external.http",		false);
-// user_pref("network.protocol-handler.external.https",		false);
-// user_pref("network.protocol-handler.external.javascript",	false);
-// user_pref("network.protocol-handler.external.moz-extension",	false);
-// user_pref("network.protocol-handler.external.ftp",		false);
-// user_pref("network.protocol-handler.external.file",		false);
-// user_pref("network.protocol-handler.external.about",		false);
-// user_pref("network.protocol-handler.external.chrome",		false);
-// user_pref("network.protocol-handler.external.blob",		false);
-// user_pref("network.protocol-handler.external.data",		false);
-// user_pref("network.protocol-handler.external.magnet",		true);
-// user_pref("network.protocol-handler.external.mailto",		true);
-// user_pref("network.protocol-handler.expose-all",		false);
-// user_pref("network.protocol-handler.expose.http",		true);
-// user_pref("network.protocol-handler.expose.https",		true);
-// user_pref("network.protocol-handler.expose.javascript",		true);
-// user_pref("network.protocol-handler.expose.moz-extension",	true);
-// user_pref("network.protocol-handler.expose.ftp",		true);
-// user_pref("network.protocol-handler.expose.file",		true);
-// user_pref("network.protocol-handler.expose.about",		true);
-// user_pref("network.protocol-handler.expose.chrome",		true);
-// user_pref("network.protocol-handler.expose.blob",		true);
-// user_pref("network.protocol-handler.expose.data",		true);
-// user_pref("network.protocol-handler.expose.magnet",		true);
-// user_pref("network.protocol-handler.expose.mailto",		true);
+user_pref("network.protocol-handler.external.http",		false);
+user_pref("network.protocol-handler.external.https",		false);
+user_pref("network.protocol-handler.external.javascript",	false);
+user_pref("network.protocol-handler.external.moz-extension",	false);
+user_pref("network.protocol-handler.external.ftp",		false);
+user_pref("network.protocol-handler.external.file",		false);
+user_pref("network.protocol-handler.external.about",		false);
+user_pref("network.protocol-handler.external.chrome",		false);
+user_pref("network.protocol-handler.external.blob",		false);
+user_pref("network.protocol-handler.external.data",		false);
+user_pref("network.protocol-handler.expose-all",		false);
+user_pref("network.protocol-handler.expose.http",		true);
+user_pref("network.protocol-handler.expose.https",		true);
+user_pref("network.protocol-handler.expose.javascript",		true);
+user_pref("network.protocol-handler.expose.moz-extension",	true);
+user_pref("network.protocol-handler.expose.ftp",		true);
+user_pref("network.protocol-handler.expose.file",		true);
+user_pref("network.protocol-handler.expose.about",		true);
+user_pref("network.protocol-handler.expose.chrome",		true);
+user_pref("network.protocol-handler.expose.blob",		true);
+user_pref("network.protocol-handler.expose.data",		true);
 
 /******************************************************************************
  * SECTION: Extensions / plugins                                                       *
@@ -379,7 +367,7 @@ user_pref("security.dialog_enable_delay",			1000);
 
 // PREF: Require signatures
 // https://wiki.mozilla.org/Addons/Extension_Signing
-user_pref("xpinstall.signatures.required",		true);
+//user_pref("xpinstall.signatures.required",		true);
 
 // PREF: Opt-out of add-on metadata updates
 // https://blog.mozilla.org/addons/how-to-opt-out-of-add-on-metadata-updates/
@@ -456,7 +444,6 @@ user_pref("extensions.systemAddon.update.enabled",		false);
 // PREF: Disable Extension recommendations (Firefox >= 65)
 // https://support.mozilla.org/en-US/kb/extension-recommendations
 user_pref("browser.newtabpage.activity-stream.asrouter.userprefs.cfr",	false);
-user_pref("extensions.htmlaboutaddons.recommendations.enabled", false);
 
 // PREF: Trusted Recursive Resolver (DNS-over-HTTPS) (disabled)
 // https://wiki.mozilla.org/Trusted_Recursive_Resolver
@@ -547,7 +534,7 @@ user_pref("privacy.resistFingerprinting",			true);
 // https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2015-2743
 // https://blog.mozilla.org/security/2015/08/06/firefox-exploit-found-in-the-wild/
 // https://www.mozilla.org/en-US/security/advisories/mfsa2015-69/
-// user_pref("pdfjs.disabled",					true);
+user_pref("pdfjs.disabled",					true);
 
 // PREF: Disable collection/sending of the health report (healthreport.sqlite*)
 // https://support.mozilla.org/en-US/kb/firefox-health-report-understand-your-browser-perf
@@ -561,8 +548,6 @@ user_pref("browser.discovery.enabled",				false);
 // PREF: Disable Heartbeat  (Mozilla user rating telemetry)
 // https://wiki.mozilla.org/Advocacy/heartbeat
 // https://trac.torproject.org/projects/tor/ticket/19047
-// https://trac.torproject.org/projects/tor/ticket/18738
-user_pref("browser.selfsupport.enabled",            false);
 user_pref("browser.selfsupport.url",				"");
 
 // PREF: Disable Firefox Hello (disabled) (Firefox < 49)
@@ -580,10 +565,10 @@ user_pref("loop.logDomains",					false);
 // CIS 2.1.1
 //user_pref("app.update.auto",					true);
 
-// PREF: Enforce checking for Firefox updates (disabled)
+// PREF: Enforce checking for Firefox updates
 // http://kb.mozillazine.org/App.update.enabled
-// NOTICE-DISABLED: Update check page might incorrectly report Firefox ESR as out-of-date
-//user_pref("app.update.enabled",                 true);
+// NOTICE: Update check page might incorrectly report Firefox ESR as out-of-date
+user_pref("app.update.enabled",                 true);
 
 // PREF: Enable blocking reported web forgeries
 // https://wiki.mozilla.org/Security/Safe_Browsing
@@ -655,8 +640,8 @@ user_pref("browser.search.suggest.enabled",			false);
 
 // PREF: Disable "Show search suggestions in location bar results"
 user_pref("browser.urlbar.suggest.searches",			false);
-// PREF: When using the location bar, don't suggest URLs from browsing history (disabled)
-//user_pref("browser.urlbar.suggest.history",			false);
+// PREF: When using the location bar, don't suggest URLs from browsing history
+user_pref("browser.urlbar.suggest.history",			false);
 
 // PREF: Disable SSDP
 // https://bugzilla.mozilla.org/show_bug.cgi?id=1111967
@@ -725,11 +710,11 @@ user_pref("security.sri.enable",				true);
 // NOTICE: Spoofing referers breaks visualisation of 3rd-party sites on the Lightbeam addon
 // NOTICE: Spoofing referers disables CSRF protection on some login pages not implementing origin-header/cookie+token based CSRF protection
 // TODO: https://github.com/pyllyukko/user.js/issues/94, commented-out XOriginPolicy/XOriginTrimmingPolicy = 2 prefs
-// user_pref("network.http.referer.spoofSource",			true);
+user_pref("network.http.referer.spoofSource",			true);
 
-// PREF: Don't send referer headers when following links across different domains
+// PREF: Don't send referer headers when following links across different domains (disabled)
 // https://github.com/pyllyukko/user.js/issues/227
-user_pref("network.http.referer.XOriginPolicy",		2);
+// user_pref("network.http.referer.XOriginPolicy",		2);
 
 // PREF: Accept Only 1st Party Cookies
 // http://kb.mozillazine.org/Network.cookie.cookieBehavior#1
@@ -762,34 +747,34 @@ user_pref("network.cookie.thirdparty.sessionOnly",		true);
  * SECTION: Caching                                                            *
  ******************************************************************************/
 
-// PREF: Permanently enable private browsing mode (disabled)
+// PREF: Permanently enable private browsing mode
 // https://support.mozilla.org/en-US/kb/Private-Browsing
 // https://wiki.mozilla.org/PrivateBrowsing
-// NOTICE-DISABLED: You can not view or inspect cookies when in private browsing: https://bugzilla.mozilla.org/show_bug.cgi?id=823941
-// NOTICE-DISABLED: When Javascript is enabled, Websites can detect use of Private Browsing mode
-// NOTICE-DISABLED: Private browsing breaks Kerberos authentication
-// NOTICE-DISABLED: Disables "Containers" functionality (see below)
-// NOTICE-DISABLED: "Always use private browsing mode" (browser.privatebrowsing.autostart) disables the possibility to use password manager: https://support.mozilla.org/en-US/kb/usernames-and-passwords-are-not-saved#w_private-browsing
-//user_pref("browser.privatebrowsing.autostart",			true);
+// NOTICE: You can not view or inspect cookies when in private browsing: https://bugzilla.mozilla.org/show_bug.cgi?id=823941
+// NOTICE: When Javascript is enabled, Websites can detect use of Private Browsing mode
+// NOTICE: Private browsing breaks Kerberos authentication
+// NOTICE: Disables "Containers" functionality (see below)
+// NOTICE: "Always use private browsing mode" (browser.privatebrowsing.autostart) disables the possibility to use password manager: https://support.mozilla.org/en-US/kb/usernames-and-passwords-are-not-saved#w_private-browsing
+user_pref("browser.privatebrowsing.autostart",			true);
 
 // PREF: Do not download URLs for the offline cache
 // http://kb.mozillazine.org/Browser.cache.offline.enable
-//user_pref("browser.cache.offline.enable",			false);
+user_pref("browser.cache.offline.enable",			false);
 
-// PREF: Clear history when Firefox closes (disabled)
+// PREF: Clear history when Firefox closes
 // https://support.mozilla.org/en-US/kb/Clear%20Recent%20History#w_how-do-i-make-firefox-clear-my-history-automatically
-// NOTICE-DISABLED: Installing user.js will remove your browsing history, caches and local storage.
-// NOTICE-DISABLED: Installing user.js **will remove your saved passwords** (https://github.com/pyllyukko/user.js/issues/27)
-// NOTICE-DISABLED: Clearing open windows on Firefox exit causes 2 windows to open when Firefox starts https://bugzilla.mozilla.org/show_bug.cgi?id=1334945
-//user_pref("privacy.sanitize.sanitizeOnShutdown",		true);
-//user_pref("privacy.clearOnShutdown.cache",			true);
-//user_pref("privacy.clearOnShutdown.cookies",			true);
-//user_pref("privacy.clearOnShutdown.downloads",		true);
-//user_pref("privacy.clearOnShutdown.formdata",		true);
-//user_pref("privacy.clearOnShutdown.history",			true);
-//user_pref("privacy.clearOnShutdown.offlineApps",		true);
-//user_pref("privacy.clearOnShutdown.sessions",		true);
-//user_pref("privacy.clearOnShutdown.openWindows",		true);
+// NOTICE: Installing user.js will remove your browsing history, caches and local storage.
+// NOTICE: Installing user.js **will remove your saved passwords** (https://github.com/pyllyukko/user.js/issues/27)
+// NOTICE: Clearing open windows on Firefox exit causes 2 windows to open when Firefox starts https://bugzilla.mozilla.org/show_bug.cgi?id=1334945
+user_pref("privacy.sanitize.sanitizeOnShutdown",		true);
+user_pref("privacy.clearOnShutdown.cache",			true);
+user_pref("privacy.clearOnShutdown.cookies",			true);
+user_pref("privacy.clearOnShutdown.downloads",			true);
+user_pref("privacy.clearOnShutdown.formdata",			true);
+user_pref("privacy.clearOnShutdown.history",			true);
+user_pref("privacy.clearOnShutdown.offlineApps",		true);
+user_pref("privacy.clearOnShutdown.sessions",			true);
+user_pref("privacy.clearOnShutdown.openWindows",		true);
 
 // PREF: Set time range to "Everything" as default in "Clear Recent History"
 user_pref("privacy.sanitize.timeSpan",				0);
@@ -803,27 +788,27 @@ user_pref("privacy.cpd.formdata",				true);
 user_pref("privacy.cpd.history",				true);
 user_pref("privacy.cpd.sessions",				true);
 
-// PREF: Don't remember browsing history (disabled)
-//user_pref("places.history.enabled",				false);
+// PREF: Don't remember browsing history
+user_pref("places.history.enabled",				false);
 
-// PREF: Disable disk cache (disabled)
+// PREF: Disable disk cache
 // http://kb.mozillazine.org/Browser.cache.disk.enable
-//user_pref("browser.cache.disk.enable",				false);
+user_pref("browser.cache.disk.enable",				false);
 
 // PREF: Disable memory cache (disabled)
 // http://kb.mozillazine.org/Browser.cache.memory.enable
 //user_pref("browser.cache.memory.enable",		false);
 
-// PREF: Disable Caching of SSL Pages  (disabled)
+// PREF: Disable Caching of SSL Pages
 // CIS Version 1.2.0 October 21st, 2011 2.5.8
 // http://kb.mozillazine.org/Browser.cache.disk_cache_ssl
-//user_pref("browser.cache.disk_cache_ssl",			false);
+user_pref("browser.cache.disk_cache_ssl",			false);
 
-// PREF: Disable download history (disabled)
+// PREF: Disable download history
 // CIS Version 1.2.0 October 21st, 2011 2.5.5
-//user_pref("browser.download.manager.retention",			0);
+user_pref("browser.download.manager.retention",			0);
 
-// PREF: Disable password manager (use an external password manager!)
+// PREF: Disable password manager
 // CIS Version 1.2.0 October 21st, 2011 2.5.2
 user_pref("signon.rememberSignons",				false);
 
@@ -832,7 +817,7 @@ user_pref("browser.formfill.enable",				false);
 
 // PREF: Cookies expires at the end of the session (when the browser closes)
 // http://kb.mozillazine.org/Network.cookie.lifetimePolicy#2
-// user_pref("network.cookie.lifetimePolicy",			2);
+user_pref("network.cookie.lifetimePolicy",			2);
 
 // PREF: Require manual intervention to autofill known username/passwords sign-in forms
 // http://kb.mozillazine.org/Signon.autofillForms
@@ -868,39 +853,23 @@ user_pref("browser.formfill.expire_days",			0);
 // NOTE: CIS says 1, we use 2
 user_pref("browser.sessionstore.privacy_level",			2);
 
-// PREF: Don't promote Firefox Sync
-user_pref("browser.syncPromoViewsLeftMap", "{\"addons\":0, \"passwords\":0, \"bookmarks\":0}");
-
-// PREF: Disblae Firefox Sync by default
-user_pref("identity.fxaccounts.enabled", false);
-
-// PREF: Never sync prefs, addons, or tabs with other browsers
-user_pref("services.sync.engine.prefs", false);
-user_pref("services.sync.engine.addons", false);
-user_pref("services.sync.engine.tabs", false);
-
 // PREF: Delete temporary files on exit
 // https://bugzilla.mozilla.org/show_bug.cgi?id=238789
 user_pref("browser.helperApps.deleteTempFileOnExit",		true);
 
-// PREF: Do not create screenshots of visited pages (relates to the "new tab page" feature) (disabled)
+// PREF: Do not create screenshots of visited pages (relates to the "new tab page" feature)
 // https://support.mozilla.org/en-US/questions/973320
 // https://developer.mozilla.org/en-US/docs/Mozilla/Preferences/Preference_reference/browser.pagethumbnails.capturing_disabled
-//user_pref("browser.pagethumbnails.capturing_disabled",		true);
+user_pref("browser.pagethumbnails.capturing_disabled",		true);
 
 // PREF: Don't fetch and permanently store favicons for Windows .URL shortcuts created by drag and drop
 // NOTICE: .URL shortcut files will be created with a generic icon
 // Favicons are stored as .ico files in $profile_dir\shortcutCache
 user_pref("browser.shell.shortcutFavicons",					false);
 
-// PREF: Limi bookmarks backups to 1 (default: 15)
+// PREF: Disable bookmarks backups (default: 15)
 // http://kb.mozillazine.org/Browser.bookmarks.max_backups
-user_pref("browser.bookmarks.max_backups", 1);
-
-// PREF: Export bookmarks to HTML automatically when closing Firefox (disabled)
-// https://support.mozilla.org/en-US/questions/1176242
-//user_pref("browser.bookmarks.autoExportHTML", 				true);
-//user_pref("browser.bookmarks.file",	'/path/to/bookmarks-export.html');
+user_pref("browser.bookmarks.max_backups", 0);
 
 /*******************************************************************************
  * SECTION: UI related                                                         *
@@ -915,7 +884,7 @@ user_pref("security.insecure_password.ui.enabled",		true);
 // PREF: Disable right-click menu manipulation via JavaScript (disabled)
 //user_pref("dom.event.contextmenu.enabled",		false);
 
-// PREF: Disable "Are you sure you want to leave this page?" popups on page close  (disabled)
+// PREF: Disable "Are you sure you want to leave this page?" popups on page close
 // https://support.mozilla.org/en-US/questions/1043508
 // Does not prevent JS leaks of the page close event.
 // https://developer.mozilla.org/en-US/docs/Web/Events/beforeunload
@@ -929,10 +898,11 @@ user_pref("browser.download.folderList",			2);
 // https://developer.mozilla.org/en/Download_Manager_preferences (obsolete)
 user_pref("browser.download.useDownloadDir",			false);
 
-// PREF: Disable the "new tab page" (disabled)
+// PREF: Disable the "new tab page" feature and show a blank tab instead
 // https://wiki.mozilla.org/Privacy/Reviews/New_Tab
 // https://support.mozilla.org/en-US/kb/new-tab-page-show-hide-and-customize-top-sites#w_how-do-i-turn-the-new-tab-page-off
-//user_pref("browser.newtabpage.enabled",				false);
+user_pref("browser.newtabpage.enabled",				false);
+user_pref("browser.newtab.url",					"about:blank");
 
 // PREF: Disable Snippets
 // https://wiki.mozilla.org/Firefox/Projects/Firefox_Start/Snippet_Service
@@ -941,7 +911,7 @@ user_pref("browser.newtabpage.activity-stream.feeds.snippets",	false);
 
 // PREF: Disable Activity Stream
 // https://wiki.mozilla.org/Firefox/Activity_Stream
-// user_pref("browser.newtabpage.activity-stream.enabled",		false);
+user_pref("browser.newtabpage.activity-stream.enabled",		false);
 
 // PREF: Disable new tab tile ads & preload
 // http://www.thewindowsclub.com/disable-remove-ad-tiles-from-firefox
@@ -970,19 +940,19 @@ user_pref("plugins.update.notifyUser",				true);
 // CIS Mozilla Firefox 24 ESR v1.0.0 - 3.6
 user_pref("network.IDN_show_punycode",				true);
 
-// PREF: Disable inline autocomplete in URL bar  (disabled)
+// PREF: Disable inline autocomplete in URL bar
 // http://kb.mozillazine.org/Inline_autocomplete
-// user_pref("browser.urlbar.autoFill",				false);
-// user_pref("browser.urlbar.autoFill.typed",			false);
+user_pref("browser.urlbar.autoFill",				false);
+user_pref("browser.urlbar.autoFill.typed",			false);
 
-// PREF: Disable CSS :visited selectors (disabled)
+// PREF: Disable CSS :visited selectors
 // https://blog.mozilla.org/security/2010/03/31/plugging-the-css-history-leak/
 // https://dbaron.org/mozilla/visited-privacy
-//user_pref("layout.css.visited_links_enabled",			false);
+user_pref("layout.css.visited_links_enabled",			false);
 
-// PREF: Disable URL bar autocomplete and history/bookmarks suggestions dropdown (disabled)
+// PREF: Disable URL bar autocomplete and history/bookmarks suggestions dropdown
 // http://kb.mozillazine.org/Disabling_autocomplete_-_Firefox#Firefox_3.5
-//user_pref("browser.urlbar.autocomplete.enabled",		false);
+user_pref("browser.urlbar.autocomplete.enabled",		false);
 
 // PREF: Do not check if Firefox is the default browser
 user_pref("browser.shell.checkDefaultBrowser",			false);
@@ -991,8 +961,8 @@ user_pref("browser.shell.checkDefaultBrowser",			false);
 // CIS Version 1.2.0 October 21st, 2011 2.5.3 Disable Prompting for Credential Storage
 user_pref("security.ask_for_password",				2);
 
-// PREF: Lock the password storage every 5 minutes (default: 30)
-user_pref("security.password_lifetime",				5);
+// PREF: Lock the password storage every 1 minutes (default: 30)
+user_pref("security.password_lifetime",				1);
 
 // PREF: Display a notification bar when websites offer data for offline use
 // http://kb.mozillazine.org/Browser.offline-apps.notify
@@ -1101,6 +1071,12 @@ user_pref("security.ssl.errorReporting.automatic",		false);
 // https://github.com/pyllyukko/user.js/issues/210
 user_pref("browser.ssl_override_behavior",			1);
 
+// PREF: Encrypted SNI (when TRR is enabled)
+// https://www.cloudflare.com/ssl/encrypted-sni/
+// https://wiki.mozilla.org/Trusted_Recursive_Resolver#ESNI
+// https://en.wikipedia.org/wiki/Server_Name_Indication#Security_implications_(ESNI)
+user_pref("network.security.esni.enabled",			true);
+
 /******************************************************************************
  * SECTION: Cipher suites                                                     *
  ******************************************************************************/
@@ -1165,10 +1141,6 @@ user_pref("security.ssl3.ecdh_ecdsa_aes_256_sha",		false);
 // PREF: Disable 256 bits ciphers without PFS
 user_pref("security.ssl3.rsa_camellia_256_sha",			false);
 
-// PREF: Enable ciphers with ECDHE and key size > 128bits
-user_pref("security.ssl3.ecdhe_rsa_aes_256_sha",		true); // 0xc014
-user_pref("security.ssl3.ecdhe_ecdsa_aes_256_sha",		true); // 0xc00a
-
 // PREF: Enable GCM ciphers (TLSv1.2 only)
 // https://en.wikipedia.org/wiki/Galois/Counter_Mode
 user_pref("security.ssl3.ecdhe_ecdsa_aes_128_gcm_sha256",	true); // 0xc02b
@@ -1194,119 +1166,8 @@ user_pref("security.ssl3.dhe_dss_aes_256_sha",			false);
 user_pref("security.ssl3.dhe_dss_camellia_128_sha",		false);
 user_pref("security.ssl3.dhe_dss_camellia_256_sha",		false);
 
-// PREF: Fallbacks due compatibility reasons
-user_pref("security.ssl3.rsa_aes_256_sha",			true); // 0x35
-user_pref("security.ssl3.rsa_aes_128_sha",			true); // 0x2f
-
-/******************************************************************************
- * TWEAKS FOR https://github.com/nodiscc/dbu                                 *
-******************************************************************************/
-
-// Abort long redirections and popup spam
-user_pref("network.http.redirection-limit", 5);
-user_pref("dom.popup_maximum", 10);
-
-// PREF: Pressing [Backspace] will go back a page in the session history (usability)
-// http://kb.mozillazine.org/Browser.backspace_action
-user_pref("browser.backspace_action", 0);
-
-// PREF: Do not paste clipboard contents on middle-click on Linux (usability)
-// http://kb.mozillazine.org/Middlemouse.contentLoadURL
-// http://kb.mozillazine.org/Middlemouse.paste
-user_pref("middlemouse.contentLoadURL", false);
-user_pref("middlemouse.paste", false);
-
-// Let transmission handle magnet links (usability)
-user_pref("network.protocol-handler.app.magnet", "/usr/bin/transmission-gtk");
-
-// Allow mouse-wheel click scrolling (usability)
-user_pref("general.autoScroll", true);
-
-// The browser will prompt for confirmation when closing the browser when more than one tab is open. (UI)
-// http://kb.mozillazine.org/About:config_entries#Browser.
-user_pref("browser.tabs.warnOnClose", true);
-
-// Hide "know your rights" button on first run (UI)
-user_pref("browser.rights.3.shown", false);
-
-// PREF: Disable MAF addon welcome page (UI, addons) (disabled)
-//user_pref("extensions.maf.other.displaywelcomepage", false);
-
-// PREF: Suppress Firefox Accounts "Welcome" page/"What's new" page after upgrades (UI, usability), show the new tab page
-// https://github.com/nodiscc/ohmpage
-user_pref("startup.homepage_welcome_url", "");
-user_pref("startup.homepage_welcome_url.additional", "");
-user_pref("startup.homepage_override_url", "about:newtab");
-
-// PREF: Display installed addons list by default in about:addons (instead of AMO homepage) (UI)
-user_pref("extensions.ui.lastCategory", "addons://list/extension");
-
-// PREF: Show new search bar menu (UI)
-user_pref("browser.search.showOneOffButtons", true);
-
-// PREF: Allow addon installation from user's profile directory
-// http://kb.mozillazine.org/About:config_entries#Extensions.
-// user_pref("extensions.autoDisableScopes", 0);
-// user_pref("extensions.enabledScopes", 15);
-
-// Disable HTTPS Everywhere observatory (addons)
-// user_pref("extensions.https_everywhere._observatory.enabled", false);
-// user_pref("extensions.https_everywhere._observatory.popup_shown", true);
-// user_pref("extensions.https_everywhere._observatory.clean_config", true);
-// user_pref("extensions.https_everywhere.firstrun_context_menu", false);
-// user_pref("extensions.https_everywhere.toolbar_hint_shown", true);
-// user_pref("extensions.https_everywhere.prefs_version", 1);
-
-// Show addon selection/review UI for preinstalled addons (disabled)
-// https://blog.mozilla.org/addons/2011/08/11/strengthening-user-control-of-add-ons/
-//user_pref("extensions.shownSelectionUI", true);
-
-// Enable TLS False start (improves network latency, disabled)
-// https://tools.ietf.org/html/draft-bmoeller-tls-falsestart-00
-//user_pref("security.ssl.enable_false_start", true);
-
-// Auto-enable these addons (disabled)
-// https://github.com/yardenac/sext/blob/master/mozilla.cfg
-//user_pref("extensions.enabledAddons", "");
-
-// Pref: Enable HTTP pipelining (performance)
-user_pref("network.http.pipelining", true);
-user_pref("network.http.pipelining.maxrequests", 8);
-user_pref("network.http.pipelining.ssl", true);
-
-// Only store 3 previous history pages in memory (performance) (default: -1, automatic)
-// http://kb.mozillazine.org/Browser.sessionhistory.max_total_viewers
-user_pref("browser.sessionhistory.max_total_viewers", 3);
-
-// Pref: Increase time between session save operations (performance) 
-// http://kb.mozillazine.org/Browser.sessionstore.interval
-// (default=15000)
-user_pref("browser.sessionstore.interval", 180000);
-
-// PREF: Disable smooth scrolling (performance)
-user_pref("general.smoothScroll", false);
-user_pref("general.smoothScroll.pages", false);
-
-// PREF: Force webGL acceleration (performance) (disabled)
-// user_pref("layers.acceleration.force-enabled", true);
-// user_pref("layers.offmainthreadcomposition.enabled", true);
-
-// Proxy preferences (performance) (disabled)
-// user_pref("network.http.max-persistent-connections-per-proxy", 16);
-// user_pref("network.http.max-persistent-connections-per-server", 16);
-// user_pref("network.http.proxy.pipelining", true);
-
-// PREF: Perform DNS lookups on remote SOCKS proxy server when a SOCKS proxy is enabled (disabled)
-//user_pref("network.proxy.socks_remote_dns", true);
-
-// PREF: set fallback font to workaround the default serif showing incorrect characters for some icon fonts
-// https://github.com/pyllyukko/user.js/pull/300
-user_pref("font.name.serif.x-western",					"sans-serif");
-
-// PREF: use french locale in user interface
-// https://blog.mozilla.org/l10n/2019/04/02/changing-the-language-of-firefox-directly-from-the-browser/
-user_pref("intl.locale.requested",				"fr");
-
-// PREF: use custom default UI layout:
-// No useless separators, show search bar, addons buttons in personal toolbar
-user_pref("browser.uiCustomization.state", "{\"placements\":{\"widget-overflow-fixed-list\":[\"feed-button\",\"containers-panelmenu\"],\"nav-bar\":[\"back-button\",\"forward-button\",\"stop-reload-button\",\"home-button\",\"urlbar-container\",\"search-container\",\"downloads-button\",\"library-button\",\"sidebar-button\"],\"toolbar-menubar\":[\"menubar-items\"],\"TabsToolbar\":[\"tabbrowser-tabs\",\"new-tab-button\",\"alltabs-button\"],\"PersonalToolbar\":[\"personal-bookmarks\",\"keepassxc-browser_keepassxc_org-browser-action\",\"https-everywhere-eff_eff_org-browser-action\",\"ublock0_raymondhill_net-browser-action\",\"cookieautodelete_kennydo_com-browser-action\",\"https-everywhere_eff_org-browser-action\"]},\"seen\":[\"cookieautodelete_kennydo_com-browser-action\",\"https-everywhere_eff_org-browser-action\",\"ublock0_raymondhill_net-browser-action\",\"developer-button\",\"https-everywhere-eff_eff_org-browser-action\",\"keepassxc-browser_keepassxc_org-browser-action\"],\"dirtyAreaCache\":[\"PersonalToolbar\",\"nav-bar\",\"TabsToolbar\",\"toolbar-menubar\",\"PanelUI-contents\",\"widget-overflow-fixed-list\"],\"currentVersion\":16,\"newElementCount\":5}");
+// PREF: Ciphers with CBC & SHA-1 (disabled)
+//user_pref("security.ssl3.rsa_aes_256_sha",			false); // 0x35
+//user_pref("security.ssl3.rsa_aes_128_sha",			false); // 0x2f
+//user_pref("security.ssl3.ecdhe_rsa_aes_256_sha",		false); // 0xc014
+//user_pref("security.ssl3.ecdhe_ecdsa_aes_256_sha",		false); // 0xc00a
