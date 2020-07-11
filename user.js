@@ -311,10 +311,8 @@ user_pref("gfx.font_rendering.opentype_svg.enabled",		false);
 user_pref("media.video_stats.enabled",				false);
 
 // PREF: Don't reveal build ID
-// Value taken from Tor Browser
 // https://bugzilla.mozilla.org/show_bug.cgi?id=583181
 user_pref("general.buildID.override",				"20100101");
-user_pref("browser.startup.homepage_override.buildID",		"20100101");
 
 // PREF: Prevent font fingerprinting
 // https://browserleaks.com/fonts
