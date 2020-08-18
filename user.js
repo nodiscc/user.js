@@ -317,10 +317,11 @@ user_pref("media.video_stats.enabled",				false);
 // https://bugzilla.mozilla.org/show_bug.cgi?id=583181
 user_pref("general.buildID.override",				"20100101");
 
-// PREF: Prevent font fingerprinting
+// PREF: Don't use document specified fonts to prevent installed font enumeration (fingerprinting) (disabled)
+// https://github.com/pyllyukko/user.js/issues/395
 // https://browserleaks.com/fonts
 // https://github.com/pyllyukko/user.js/issues/120
-user_pref("browser.display.use_document_fonts",			0);
+//user_pref("browser.display.use_document_fonts",			0);
 
 // PREF: Enable only whitelisted URL protocol handlers
 // http://kb.mozillazine.org/Network.protocol-handler.external-default
