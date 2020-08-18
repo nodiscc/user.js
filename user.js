@@ -212,13 +212,14 @@ user_pref("browser.search.countryCode",				"US");
 user_pref("browser.search.region",				"US");
 user_pref("browser.search.geoip.url",				"");
 
-// PREF: Set Accept-Language HTTP header to en-US regardless of Firefox localization
+// PREF: Set Accept-Language HTTP header to en-US regardless of Firefox localization (disabled)
+// Firefox will ask the user if they want to set accepted language to english, "en-US, en" breaks the language selection dialog and some web applications (netdata.cloud, tt-rss...)
 // https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept-Language
-user_pref("intl.accept_languages",				"en-US, en");
+//user_pref("intl.accept_languages",				"en-US, en");
 
-// PREF: Don't use OS values to determine locale, force using Firefox locale setting
+// PREF: Don't use OS values to determine locale, force using Firefox locale setting (disabled)
 // http://kb.mozillazine.org/Intl.locale.matchOS
-user_pref("intl.locale.matchOS",				false);
+user_pref("intl.locale.matchOS",				true);
 
 // PREF: Don't use Mozilla-provided location-specific search engines
 user_pref("browser.search.geoSpecificDefaults",			false);
