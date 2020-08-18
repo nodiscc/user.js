@@ -836,7 +836,7 @@ user_pref("privacy.cpd.sessions",				true);
 // CIS Version 1.2.0 October 21st, 2011 2.5.5
 //user_pref("browser.download.manager.retention",			0);
 
-// PREF: Disable password manager
+// PREF: Disable password manager (use an external password manager!)
 // CIS Version 1.2.0 October 21st, 2011 2.5.2
 user_pref("signon.rememberSignons",				false);
 
