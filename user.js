@@ -286,12 +286,13 @@ user_pref("security.fileuri.strict_origin_policy",		true);
 // CIS 2.3.6 
 user_pref("browser.urlbar.filter.javascript",			true);
 
-// PREF: Disable asm.js
+// PREF: Disable asm.js (disabled)
 // http://asmjs.org/
 // https://www.mozilla.org/en-US/security/advisories/mfsa2015-29/
 // https://www.mozilla.org/en-US/security/advisories/mfsa2015-50/
 // https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-2712
-user_pref("javascript.options.asmjs",				false);
+// NOTICE-DISABLED: Fixed in Firefox 36, disabling harms performance
+//user_pref("javascript.options.asmjs",				false);
 
 // PREF: Disable SVG in OpenType fonts
 // https://wiki.mozilla.org/SVGOpenTypeFonts
