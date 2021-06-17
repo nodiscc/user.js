@@ -217,9 +217,9 @@ user_pref("browser.search.geoip.url",				"");
 // https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept-Language
 user_pref("intl.accept_languages",				"en-US, en");
 
-// PREF: Don't use OS values to determine locale, force using Firefox locale setting
+// PREF: Don't use OS values to determine locale, force using Firefox locale setting (disabled)
 // http://kb.mozillazine.org/Intl.locale.matchOS
-user_pref("intl.locale.matchOS",				false);
+//user_pref("intl.locale.matchOS",				false);
 
 // PREF: Don't use Mozilla-provided location-specific search engines
 user_pref("browser.search.geoSpecificDefaults",			false);
