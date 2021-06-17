@@ -666,8 +666,8 @@ user_pref("browser.search.suggest.enabled",			false);
 
 // PREF: Disable "Show search suggestions in location bar results"
 user_pref("browser.urlbar.suggest.searches",			false);
-// PREF: When using the location bar, don't suggest URLs from browsing history
-user_pref("browser.urlbar.suggest.history",			false);
+// PREF: When using the location bar, don't suggest URLs from browsing history (disabled)
+//user_pref("browser.urlbar.suggest.history",			false);
 
 // PREF: Disable SSDP
 // https://bugzilla.mozilla.org/show_bug.cgi?id=1111967
