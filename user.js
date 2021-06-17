@@ -1212,3 +1212,93 @@ user_pref("security.ssl3.dhe_dss_camellia_256_sha",		false);
 //user_pref("security.ssl3.rsa_aes_128_sha",			false); // 0x2f
 //user_pref("security.ssl3.ecdhe_rsa_aes_256_sha",		false); // 0xc014
 //user_pref("security.ssl3.ecdhe_ecdsa_aes_256_sha",		false); // 0xc00a
+
+/******************************************************************************
+ * INTERFACE / USABILITY                                                      *
+******************************************************************************/
+
+// PREF: Abort after this number of HTTP redirections (default 20)
+user_pref("network.http.redirection-limit", 10);
+
+// PREF: Maximum number of simultaneously open popup windows (default 20)
+user_pref("dom.popup_maximum", 10);
+
+// PREF: Pressing [Backspace] will go back a page in the session history
+// http://kb.mozillazine.org/Browser.backspace_action
+user_pref("browser.backspace_action", 0);
+
+// PREF: Do not paste clipboard contents on middle-click on Linux
+// http://kb.mozillazine.org/Middlemouse.contentLoadURL
+// http://kb.mozillazine.org/Middlemouse.paste
+user_pref("middlemouse.contentLoadURL", false);
+user_pref("middlemouse.paste", false);
+
+// PREF: Let transmission handle magnet links
+user_pref("network.protocol-handler.app.magnet", "/usr/bin/transmission-gtk");
+
+// PREF: Allow scrolling on middle mouse button click
+user_pref("general.autoScroll", true);
+
+// PREF: Prompt for confirmation when closing the browser when more than one tab is open.
+// http://kb.mozillazine.org/About:config_entries#Browser.
+user_pref("browser.tabs.warnOnClose", true);
+
+// PREF: Hide "know your rights" button on first run
+user_pref("browser.rights.3.shown", false);
+
+// PREF: Use custom startup homepage instead of about:home (disabled)
+//user_pref("browser.startup.homepage", "/usr/share/ohmpage/index.html");
+
+// PREF: Suppress Firefox Accounts "Welcome" page/"What's new" page after upgrades
+// show a custom page instead
+// https://github.com/nodiscc/ohmpage
+//user_pref("startup.homepage_welcome_url", "");
+//user_pref("startup.homepage_welcome_url.additional", "");
+//user_pref("startup.homepage_override_url", "/usr/share/ohmpage/index.html");
+
+// PREF: Display installed addons list by default in about:addons (instead of AMO homepage)
+user_pref("extensions.ui.lastCategory", "addons://list/extension");
+
+// PREF: Show new search bar menu including search engine buttons
+user_pref("browser.search.showOneOffButtons", true);
+
+// PREF: Set the default buttons/UI layout (addons in personal toolbar)
+user_pref("browser.uiCustomization.state", "{\"placements\":{\"PanelUI-contents\":[\"edit-controls\",\"zoom-controls\",\"new-window-button\",\"privatebrowsing-button\",\"save-page-button\",\"print-button\",\"history-panelmenu\",\"fullscreen-button\",\"find-button\",\"preferences-button\",\"add-ons-button\",\"feed-button\",\"containers-panelmenu\",\"sync-button\"],\"addon-bar\":[\"addonbar-closebutton\",\"status-bar\"],\"PersonalToolbar\":[\"personal-bookmarks\",\"ublock0_raymondhill_net-browser-action\",\"cookieautodelete_kennydo_com-browser-action\",\"https-everywhere_eff_org-browser-action\"],\"nav-bar\":[\"urlbar-container\",\"bookmarks-menu-button\",\"search-container\",\"downloads-button\"],\"TabsToolbar\":[\"tabbrowser-tabs\",\"new-tab-button\",\"alltabs-button\"],\"toolbar-menubar\":[\"menubar-items\"]},\"seen\":[\"cookieautodelete_kennydo_com-browser-action\",\"https-everywhere_eff_org-browser-action\",\"ublock0_raymondhill_net-browser-action\",\"developer-button\"],\"dirtyAreaCache\":[\"PersonalToolbar\",\"nav-bar\",\"TabsToolbar\",\"toolbar-menubar\",\"PanelUI-contents\"],\"currentVersion\":6,\"newElementCount\":0}");
+
+// PREF: Show addon selection/review UI for preinstalled addons (disabled)
+// https://blog.mozilla.org/addons/2011/08/11/strengthening-user-control-of-add-ons/
+//user_pref("extensions.shownSelectionUI", true);
+
+// PREF: Auto-enable these addons (disabled)
+// https://github.com/yardenac/sext/blob/master/mozilla.cfg
+//user_pref("extensions.enabledAddons", "");
+
+// PREF: Enable HTTP pipelining (performance) (disabled for compatibility)
+// https://developer.mozilla.org/en-US/docs/Web/HTTP/Connection_management_in_HTTP_1.x
+//user_pref("network.http.pipelining", true);
+//user_pref("network.http.pipelining.maxrequests", 8);
+//user_pref("network.http.pipelining.ssl", true);
+
+// PREF: Only store 3 previous history pages in memory (performance) (default: -1, automatic)
+// http://kb.mozillazine.org/Browser.sessionhistory.max_total_viewers
+user_pref("browser.sessionhistory.max_total_viewers", 3);
+
+// PREF: Increase time between session save operations (default 15000) (performance)
+// http://kb.mozillazine.org/Browser.sessionstore.interval
+user_pref("browser.sessionstore.interval", 180000);
+
+// PREF: Disable smooth scrolling (performance)
+user_pref("general.smoothScroll", false);
+user_pref("general.smoothScroll.pages", false);
+
+// PREF: Force webGL acceleration (performance) (disabled)
+// user_pref("layers.acceleration.force-enabled", true);
+// user_pref("layers.offmainthreadcomposition.enabled", true);
+
+// Proxy preferences (performance) (disabled)
+// user_pref("network.http.max-persistent-connections-per-proxy", 16);
+// user_pref("network.http.max-persistent-connections-per-server", 16);
+// user_pref("network.http.proxy.pipelining", true);
+
+// PREF: Perform DNS lookups on remote SOCKS proxy server when a SOCKS proxy is enabled (disabled)
+//user_pref("network.proxy.socks_remote_dns", true);
