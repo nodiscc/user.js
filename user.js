@@ -192,12 +192,12 @@ user_pref("webgl.enable-debug-renderer-info",			false);
 // https://bugzilla.mozilla.org/show_bug.cgi?id=1360039
 user_pref("dom.maxHardwareConcurrency",				2);
 
-// PREF: Disable WebAssembly
+// PREF: Disable WebAssembly (disabled)
 // https://webassembly.org/
 // https://en.wikipedia.org/wiki/WebAssembly
 // https://trac.torproject.org/projects/tor/ticket/21549
-// NOTICE: WebAssembly is required for Unity web player/games
-user_pref("javascript.options.wasm",				false);
+// NOTICE-DISABLED: WebAssembly is required for Unity web player/games
+//user_pref("javascript.options.wasm",				false);
 
 /******************************************************************************
  * SECTION: Misc                                                              *
