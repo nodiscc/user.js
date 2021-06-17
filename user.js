@@ -904,11 +904,11 @@ user_pref("browser.bookmarks.max_backups", 0);
 //user_pref("browser.bookmarks.autoExportHTML", 				true);
 //user_pref("browser.bookmarks.file",	'/path/to/bookmarks-export.html');
 
-// PREF: Disable downloading of favicons in response to favicon fingerprinting techniques
+// PREF-DISABLED: Disable downloading of favicons in response to favicon fingerprinting techniques
 // https://github.com/jonasstrehle/supercookie
 // http://kb.mozillazine.org/Browser.chrome.site_icons
 // https://blog.mozilla.org/security/2021/01/26/supercookie-protections/
-user_pref("browser.chrome.site_icons",				false);
+//user_pref("browser.chrome.site_icons",				false);
 
 /*******************************************************************************
  * SECTION: UI related                                                         *
