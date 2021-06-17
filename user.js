@@ -71,9 +71,9 @@ user_pref("dom.netinfo.enabled",				false);
 // https://www.torproject.org/projects/torbrowser/design/#fingerprinting-defenses
 user_pref("dom.network.enabled",				false);
 
-// PREF: Disable WebRTC entirely to prevent leaking internal IP addresses (Firefox < 42)
-// NOTICE: Disabling WebRTC breaks peer-to-peer file sharing tools (reep.io ...)
-user_pref("media.peerconnection.enabled",			false);
+// PREF: Disable WebRTC entirely to prevent leaking internal IP addresses (Firefox < 42) (disabled)
+// NOTICE-DISABLED: Disabling WebRTC breaks peer-to-peer file sharing tools and camera/microphone integration
+//user_pref("media.peerconnection.enabled",			false);
 
 // PREF: Don't reveal your internal IP when WebRTC is enabled (Firefox >= 42)
 // https://wiki.mozilla.org/Media/WebRTC/Privacy
@@ -81,14 +81,14 @@ user_pref("media.peerconnection.enabled",			false);
 user_pref("media.peerconnection.ice.default_address_only",	true); // Firefox 42-51
 user_pref("media.peerconnection.ice.no_host",			true); // Firefox >= 52
 
-// PREF: Disable WebRTC getUserMedia, screen sharing, audio capture, video capture
+// PREF: Disable WebRTC getUserMedia, screen sharing, audio capture, video capture (disabled)
 // https://wiki.mozilla.org/Media/getUserMedia
 // https://blog.mozilla.org/futurereleases/2013/01/12/capture-local-camera-and-microphone-streams-with-getusermedia-now-enabled-in-firefox/
 // https://developer.mozilla.org/en-US/docs/Web/API/Navigator
-user_pref("media.navigator.enabled",				false);
-user_pref("media.navigator.video.enabled",			false);
-user_pref("media.getusermedia.screensharing.enabled",		false);
-user_pref("media.getusermedia.audiocapture.enabled",		false);
+//user_pref("media.navigator.enabled",				false);
+//user_pref("media.navigator.video.enabled",			false);
+//user_pref("media.getusermedia.screensharing.enabled",		false);
+//user_pref("media.getusermedia.audiocapture.enabled",		false);
 
 // PREF: Disable battery API (Firefox < 52)
 // https://developer.mozilla.org/en-US/docs/Web/API/BatteryManager
