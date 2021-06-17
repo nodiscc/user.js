@@ -991,9 +991,9 @@ user_pref("network.IDN_show_punycode",				true);
 // https://dbaron.org/mozilla/visited-privacy
 //user_pref("layout.css.visited_links_enabled",			false);
 
-// PREF: Disable URL bar autocomplete and history/bookmarks suggestions dropdown
+// PREF: Disable URL bar autocomplete and history/bookmarks suggestions dropdown (disabled)
 // http://kb.mozillazine.org/Disabling_autocomplete_-_Firefox#Firefox_3.5
-user_pref("browser.urlbar.autocomplete.enabled",		false);
+//user_pref("browser.urlbar.autocomplete.enabled",		false);
 
 // PREF: Do not check if Firefox is the default browser
 user_pref("browser.shell.checkDefaultBrowser",			false);
