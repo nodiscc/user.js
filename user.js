@@ -923,7 +923,7 @@ user_pref("security.insecure_password.ui.enabled",		true);
 // PREF: Disable right-click menu manipulation via JavaScript (disabled)
 //user_pref("dom.event.contextmenu.enabled",		false);
 
-// PREF: Disable "Are you sure you want to leave this page?" popups on page close
+// PREF: Disable "Are you sure you want to leave this page?" popups on page close  (disabled)
 // https://support.mozilla.org/en-US/questions/1043508
 // NOTICE: disabling "beforeunload" events may lead to losing data entered in web forms
 // Does not prevent JS leaks of the page close event.
