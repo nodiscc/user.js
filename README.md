@@ -154,14 +154,10 @@ HTML5 / [APIs](https://wiki.mozilla.org/WebAPI) / [DOM](https://en.wikipedia.org
 * Disable raw TCP socket support (mozTCPSocket) [ [1](https://trac.torproject.org/projects/tor/ticket/18863) [2](https://www.mozilla.org/en-US/security/advisories/mfsa2015-97/) [3](https://developer.mozilla.org/docs/Mozilla/B2G_OS/API/TCPSocket) ]
 * Disable leaking network/browser connection information via Javascript
 * Disable network API (Firefox < 32) [ [1](https://developer.mozilla.org/en-US/docs/Web/API/Connection/onchange) [2](https://www.torproject.org/projects/torbrowser/design/#fingerprinting-defenses) ]
-* Disable WebRTC entirely to prevent leaking internal IP addresses (Firefox < 42)
 * Don't reveal your internal IP when WebRTC is enabled (Firefox >= 42) [ [1](https://wiki.mozilla.org/Media/WebRTC/Privacy) [2](https://github.com/beefproject/beef/wiki/Module%3A-Get-Internal-IP-WebRTC) ]
-* Disable WebRTC getUserMedia, screen sharing, audio capture, video capture [ [1](https://wiki.mozilla.org/Media/getUserMedia) [2](https://blog.mozilla.org/futurereleases/2013/01/12/capture-local-camera-and-microphone-streams-with-getusermedia-now-enabled-in-firefox/) [3](https://developer.mozilla.org/en-US/docs/Web/API/Navigator) ]
 * Disable battery API (Firefox < 52) [ [1](https://developer.mozilla.org/en-US/docs/Web/API/BatteryManager) [2](https://bugzilla.mozilla.org/show_bug.cgi?id=1313580) ]
 * Disable telephony API [ [1](https://wiki.mozilla.org/WebAPI/Security/WebTelephony) ]
 * Disable "beacon" asynchronous HTTP transfers (used for analytics) [ [1](https://developer.mozilla.org/en-US/docs/Web/API/navigator.sendBeacon) ]
-* Disable clipboard event detection (onCut/onCopy/onPaste) via Javascript
-* Disable "copy to clipboard" functionality via Javascript (Firefox >= 41)
 * Disable speech recognition [ [1](https://dvcs.w3.org/hg/speech-api/raw-file/tip/speechapi.html) [2](https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition) [3](https://wiki.mozilla.org/HTML5_Speech_API) ]
 * Disable speech synthesis [ [1](https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis) ]
 * Disable sensor API [ [1](https://wiki.mozilla.org/Sensor_API) ]
@@ -178,7 +174,6 @@ HTML5 / [APIs](https://wiki.mozilla.org/WebAPI) / [DOM](https://en.wikipedia.org
 * When webGL is enabled, force enabling it even when layer acceleration is not supported [ [1](https://trac.torproject.org/projects/tor/ticket/18603) ]
 * When webGL is enabled, do not expose information about the graphics driver [ [1](https://bugzilla.mozilla.org/show_bug.cgi?id=1171228) [2](https://developer.mozilla.org/en-US/docs/Web/API/WEBGL_debug_renderer_info) ]
 * Spoof dual-core CPU [ [1](https://trac.torproject.org/projects/tor/ticket/21675) [2](https://bugzilla.mozilla.org/show_bug.cgi?id=1360039) ]
-* Disable WebAssembly [ [1](https://webassembly.org/) [2](https://en.wikipedia.org/wiki/WebAssembly) [3](https://trac.torproject.org/projects/tor/ticket/21549) ]
 
 ### Misc
 
@@ -186,11 +181,9 @@ Settings that do not belong to other sections or are user specific preferences.
 * Disable face detection
 * Disable GeoIP lookup on your address to set default search engine region [ [1](https://trac.torproject.org/projects/tor/ticket/16254) [2](https://support.mozilla.org/en-US/kb/how-stop-firefox-making-automatic-connections#w_geolocation-for-default-search-engine) ]
 * Set Accept-Language HTTP header to en-US regardless of Firefox localization [ [1](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept-Language) ]
-* Don't use OS values to determine locale, force using Firefox locale setting [ [1](http://kb.mozillazine.org/Intl.locale.matchOS) ]
 * Don't use Mozilla-provided location-specific search engines
 * Do not automatically send selection to clipboard on some Linux platforms [ [1](http://kb.mozillazine.org/Clipboard.autocopy) ]
 * Prevent leaking application locale/date format using JavaScript [ [1](https://bugzilla.mozilla.org/show_bug.cgi?id=867501) [2](https://hg.mozilla.org/mozilla-central/rev/52d635f2b33d) ]
-* Do not submit invalid URIs entered in the address bar to the default search engine [ [1](http://kb.mozillazine.org/Keyword.enabled) ]
 * Don't trim HTTP off of URLs in the address bar. [ [1](https://bugzilla.mozilla.org/show_bug.cgi?id=665580) ]
 * Don't try to guess domain names when entering an invalid domain name in URL bar [ [1](http://www-archive.mozilla.org/docs/end-user/domain-guessing.html) ]
 * When browser.fixup.alternate.enabled is enabled, strip password from 'user:password@...' URLs [ [1](https://github.com/pyllyukko/user.js/issues/290#issuecomment-303560851) ]
@@ -201,11 +194,9 @@ Settings that do not belong to other sections or are user specific preferences.
 * Disable JAR from opening Unsafe File Types [ [1](http://kb.mozillazine.org/Network.jar.open-unsafe-types) ]
 * Set File URI Origin Policy [ [1](http://kb.mozillazine.org/Security.fileuri.strict_origin_policy) ]
 * Disable Displaying Javascript in History URLs [ [1](http://kb.mozillazine.org/Browser.urlbar.filter.javascript) ]
-* Disable asm.js [ [1](http://asmjs.org/) [2](https://www.mozilla.org/en-US/security/advisories/mfsa2015-29/) [3](https://www.mozilla.org/en-US/security/advisories/mfsa2015-50/) [4](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-2712) ]
 * Disable SVG in OpenType fonts [ [1](https://wiki.mozilla.org/SVGOpenTypeFonts) [2](https://github.com/iSECPartners/publications/tree/master/reports/Tor%20Browser%20Bundle) ]
 * Disable video stats to reduce fingerprinting threat [ [1](https://bugzilla.mozilla.org/show_bug.cgi?id=654550) [2](https://github.com/pyllyukko/user.js/issues/9#issuecomment-100468785) [3](https://github.com/pyllyukko/user.js/issues/9#issuecomment-148922065) ]
 * Don't reveal build ID
-* Don't use document specified fonts to prevent installed font enumeration (fingerprinting) [ [1](https://github.com/pyllyukko/user.js/issues/395) [2](https://browserleaks.com/fonts) [3](https://github.com/pyllyukko/user.js/issues/120) ]
 * Enable only whitelisted URL protocol handlers [ [1](http://kb.mozillazine.org/Network.protocol-handler.external-default) [2](http://kb.mozillazine.org/Network.protocol-handler.warn-external-default) [3](http://kb.mozillazine.org/Network.protocol-handler.expose.%28protocol%29) [4](https://news.ycombinator.com/item?id=13047883) [5](https://bugzilla.mozilla.org/show_bug.cgi?id=167475) [6](https://github.com/pyllyukko/user.js/pull/285#issuecomment-298124005) ]
 
 ### Extensions / plugins
@@ -248,7 +239,6 @@ Disable Firefox integrated metrics/reporting/experiments, disable potentially in
 * Disable collection/sending of the health report (healthreport.sqlite*) [ [1](https://support.mozilla.org/en-US/kb/firefox-health-report-understand-your-browser-perf) [2](https://gecko.readthedocs.org/en/latest/toolkit/components/telemetry/telemetry/preferences.html) ]
 * Disable Shield/Heartbeat/Normandy (Mozilla user rating telemetry) [ [1](https://wiki.mozilla.org/Advocacy/heartbeat) [2](https://trac.torproject.org/projects/tor/ticket/19047) [3](https://trac.torproject.org/projects/tor/ticket/18738) [4](https://wiki.mozilla.org/Firefox/Shield) [5](https://github.com/mozilla/normandy) [6](https://support.mozilla.org/en-US/kb/shield) [7](https://bugzilla.mozilla.org/show_bug.cgi?id=1370801) ]
 * Disable Firefox Hello metrics collection [ [1](https://groups.google.com/d/topic/mozilla.dev.platform/nyVkCx-_sFw/discussion) ]
-* Enforce checking for Firefox updates [ [1](http://kb.mozillazine.org/App.update.enabled) ]
 * Enable blocking reported web forgeries [ [1](https://wiki.mozilla.org/Security/Safe_Browsing) [2](http://kb.mozillazine.org/Safe_browsing) [3](https://support.mozilla.org/en-US/kb/how-does-phishing-and-malware-protection-work) [4](http://forums.mozillazine.org/viewtopic.php?f=39&t=2711237&p=12896849#p12896849) ]
 * Enable blocking reported attack sites [ [1](http://kb.mozillazine.org/Browser.safebrowsing.malware.enabled) ]
 * Disable querying Google Application Reputation database for downloaded binary files [ [1](https://www.mozilla.org/en-US/firefox/39.0/releasenotes/) [2](https://wiki.mozilla.org/Security/Application_Reputation) ]
@@ -264,7 +254,6 @@ Prevents the browser from [auto-connecting](https://support.mozilla.org/en-US/kb
 * Reject .onion hostnames before passing the to DNS [ [1](https://bugzilla.mozilla.org/show_bug.cgi?id=1228457) ]
 * Disable search suggestions in the search bar [ [1](http://kb.mozillazine.org/Browser.search.suggest.enabled) ]
 * Disable "Show search suggestions in location bar results"
-* When using the location bar, don't suggest URLs from browsing history
 * Disable SSDP [ [1](https://bugzilla.mozilla.org/show_bug.cgi?id=1111967) ]
 * Disable automatic downloading of OpenH264 codec [ [1](https://support.mozilla.org/en-US/kb/how-stop-firefox-making-automatic-connections#w_media-capabilities) [2](https://andreasgal.com/2014/10/14/openh264-now-in-firefox/) ]
 * Disable speculative pre-connections [ [1](https://support.mozilla.org/en-US/kb/how-stop-firefox-making-automatic-connections#w_speculative-pre-connections) [2](https://bugzilla.mozilla.org/show_bug.cgi?id=814169) ]
@@ -287,15 +276,8 @@ HTTP protocol related entries. This affects cookies, the user agent, referer and
 ### Caching
 
 Enable and configure private browsing mode, don't store information locally during the browsing session
-* Permanently enable private browsing mode [ [1](https://support.mozilla.org/en-US/kb/Private-Browsing) [2](https://wiki.mozilla.org/PrivateBrowsing) ]
-* Do not download URLs for the offline cache [ [1](http://kb.mozillazine.org/Browser.cache.offline.enable) ]
-* Clear history when Firefox closes [ [1](https://support.mozilla.org/en-US/kb/Clear%20Recent%20History#w_how-do-i-make-firefox-clear-my-history-automatically) ]
 * Set time range to "Everything" as default in "Clear Recent History"
 * Clear everything but "Site Preferences" in "Clear Recent History"
-* Don't remember browsing history
-* Disable disk cache [ [1](http://kb.mozillazine.org/Browser.cache.disk.enable) ]
-* Disable Caching of SSL Pages
-* Disable download history
 * Disable password manager (use an external password manager!)
 * Disable form autofill, don't save information entered in web page forms and the Search Bar
 * Cookies expires at the end of the session (when the browser closes) [ [1](http://kb.mozillazine.org/Network.cookie.lifetimePolicy#2) ]
@@ -306,27 +288,20 @@ Enable and configure private browsing mode, don't store information locally duri
 * Delete Search and Form History
 * Clear SSL Form Session Data [ [1](http://kb.mozillazine.org/Browser.sessionstore.privacy_level#2) ]
 * Delete temporary files on exit [ [1](https://bugzilla.mozilla.org/show_bug.cgi?id=238789) ]
-* Do not create screenshots of visited pages (relates to the "new tab page" feature) [ [1](https://support.mozilla.org/en-US/questions/973320) [2](https://developer.mozilla.org/en-US/docs/Mozilla/Preferences/Preference_reference/browser.pagethumbnails.capturing_disabled) ]
 * Don't fetch and permanently store favicons for Windows .URL shortcuts created by drag and drop
 * Disable bookmarks backups (default: 15) [ [1](http://kb.mozillazine.org/Browser.bookmarks.max_backups) ]
-* Disable downloading of favicons in response to favicon fingerprinting techniques [ [1](https://github.com/jonasstrehle/supercookie) [2](http://kb.mozillazine.org/Browser.chrome.site_icons) [3](https://blog.mozilla.org/security/2021/01/26/supercookie-protections/) ]
 
 ### UI related
 
 Improve visibility of security-related elements, mitigate shoulder-surfing
 * Enable insecure password warnings (login forms in non-HTTPS pages) [ [1](https://blog.mozilla.org/tanvi/2016/01/28/no-more-passwords-over-http-please/) [2](https://bugzilla.mozilla.org/show_bug.cgi?id=1319119) [3](https://bugzilla.mozilla.org/show_bug.cgi?id=1217156) ]
-* Disable "Are you sure you want to leave this page?" popups on page close [ [1](https://support.mozilla.org/en-US/questions/1043508) ]
 * Disable Downloading on Desktop
 * Always ask the user where to download [ [1](https://developer.mozilla.org/en/Download_Manager_preferences (obsolete)) ]
-* Disable the "new tab page" feature and show a blank tab instead [ [1](https://wiki.mozilla.org/Privacy/Reviews/New_Tab) [2](https://support.mozilla.org/en-US/kb/new-tab-page-show-hide-and-customize-top-sites#w_how-do-i-turn-the-new-tab-page-off) ]
 * Disable Snippets [ [1](https://wiki.mozilla.org/Firefox/Projects/Firefox_Start/Snippet_Service) [2](https://support.mozilla.org/en-US/kb/snippets-firefox-faq) ]
 * Disable Activity Stream [ [1](https://wiki.mozilla.org/Firefox/Activity_Stream) ]
 * Disable new tab tile ads & preload [ [1](http://www.thewindowsclub.com/disable-remove-ad-tiles-from-firefox) [2](http://forums.mozillazine.org/viewtopic.php?p=13876331#p13876331) [3](https://wiki.mozilla.org/Tiles/Technical_Documentation#Ping) [4](https://gecko.readthedocs.org/en/latest/browser/browser/DirectoryLinksProvider.html#browser-newtabpage-directory-source) [5](https://gecko.readthedocs.org/en/latest/browser/browser/DirectoryLinksProvider.html#browser-newtabpage-directory-ping) ]
 * Enable Auto Notification of Outdated Plugins (Firefox < 50) [ [1](https://wiki.mozilla.org/Firefox3.6/Plugin_Update_Awareness_Security_Review) ]
 * Force Punycode for Internationalized Domain Names [ [1](http://kb.mozillazine.org/Network.IDN_show_punycode) [2](https://www.xudongz.com/blog/2017/idn-phishing/) [3](https://wiki.mozilla.org/IDN_Display_Algorithm) [4](https://en.wikipedia.org/wiki/IDN_homograph_attack) [5](https://www.mozilla.org/en-US/security/advisories/mfsa2017-02/) ]
-* Disable inline autocomplete in URL bar [ [1](http://kb.mozillazine.org/Inline_autocomplete) ]
-* Disable CSS :visited selectors [ [1](https://blog.mozilla.org/security/2010/03/31/plugging-the-css-history-leak/) [2](https://dbaron.org/mozilla/visited-privacy) ]
-* Disable URL bar autocomplete and history/bookmarks suggestions dropdown [ [1](http://kb.mozillazine.org/Disabling_autocomplete_-_Firefox#Firefox_3.5) ]
 * Do not check if Firefox is the default browser
 * When password manager is enabled, lock the password storage periodically
 * Lock the password storage every 1 minutes (default: 30)
@@ -364,6 +339,22 @@ This section tweaks the cipher suites used by Firefox. The idea is to support on
 * Enable ChaCha20 and Poly1305 (Firefox >= 47) [ [1](https://www.mozilla.org/en-US/firefox/47.0/releasenotes/) [2](https://tools.ietf.org/html/rfc7905) [3](https://bugzilla.mozilla.org/show_bug.cgi?id=917571) [4](https://bugzilla.mozilla.org/show_bug.cgi?id=1247860) [5](https://cr.yp.to/chacha.html) ]
 * Disable ciphers susceptible to the logjam attack [ [1](https://weakdh.org/) ]
 * Disable ciphers with DSA (max 1024 bits)
+* Abort after this number of HTTP redirections (default 20)
+* Maximum number of simultaneously open popup windows (default 20)
+* Pressing [Backspace] will go back a page in the session history [ [1](http://kb.mozillazine.org/Browser.backspace_action) ]
+* Do not paste clipboard contents on middle-click on Linux [ [1](http://kb.mozillazine.org/Middlemouse.contentLoadURL) [2](http://kb.mozillazine.org/Middlemouse.paste) ]
+* Let transmission handle magnet links
+* Allow scrolling on middle mouse button click
+* Prompt for confirmation when closing the browser when more than one tab is open. [ [1](http://kb.mozillazine.org/About:config_entries#Browser.) ]
+* Hide "know your rights" button on first run
+* Suppress Firefox Accounts "Welcome" page/"What's new" page after upgrades
+* Display installed addons list by default in about:addons (instead of AMO homepage)
+* Show new search bar menu including search engine buttons
+* Set the default buttons/UI layout (addons in personal toolbar)
+* Enable HTTP pipelining (performance) (disabled for compatibility) [ [1](https://developer.mozilla.org/en-US/docs/Web/HTTP/Connection_management_in_HTTP_1.x) ]
+* Only store 3 previous history pages in memory (performance) (default: -1, automatic) [ [1](http://kb.mozillazine.org/Browser.sessionhistory.max_total_viewers) ]
+* Increase time between session save operations (default 15000) (performance) [ [1](http://kb.mozillazine.org/Browser.sessionstore.interval) ]
+* Disable smooth scrolling (performance)
 <!-- END SECTION -->
 
 -------------------------------------------------------------------------
@@ -417,10 +408,7 @@ Hardening your often implies a trade-off with ease-of-use and comes with reduced
 <!-- BEGIN PROBLEMS-LIMITATIONS -->
 * Disabling ServiceWorkers breaks functionality on some sites (Google Street View...)
 * Web Audio API is required for Unity web player/games
-* Disabling WebRTC breaks peer-to-peer file sharing tools (reep.io ...)
-* Disabling clipboard events breaks Ctrl+C/X/V copy/cut/paste functionaility in JS-based web applications (Google Docs...)
 * Disabling clipboard operations will break legitimate JS-based "copy to clipboard" functionality
-* WebAssembly is required for Unity web player/games
 * Enabling Mixed Display Content blocking can prevent images/styles... from loading properly when connection to the website is only partially secured
 * Disabling nonessential protocols breaks all interaction with custom protocols such as mailto:, irc:, magnet: ... and breaks opening third-party mail/messaging/torrent/... clients when clicking on links with these protocols
 * Disabling system add-on updates prevents Mozilla from "hotfixing" your browser to patch critical problems (one possible use case from the documentation)
@@ -428,19 +416,13 @@ Hardening your often implies a trade-off with ease-of-use and comes with reduced
 * RFP breaks some keyboard shortcuts used in certain websites (see #443)
 * RFP changes your time zone
 * Fully automatic updates are disabled and left to package management systems on Linux. Windows users may want to change this setting.
-* Update check page might incorrectly report Firefox ESR as out-of-date
 * Do No Track must be enabled manually
+* Spoofing referers breaks functionality on websites relying on authentic referer headers
+* Spoofing referers breaks visualisation of 3rd-party sites on the Lightbeam addon
+* Spoofing referers disables CSRF protection on some login pages not implementing origin-header/cookie+token based CSRF protection
 * Blocking 3rd-party cookies breaks a number of payment gateways
 * First-party isolation breaks Microsoft Teams
 * First-party isolation causes HTTP basic auth to ask for credentials for every new tab (see #425)
-* You can not view or inspect cookies when in private browsing: https://bugzilla.mozilla.org/show_bug.cgi?id=823941
-* When Javascript is enabled, Websites can detect use of Private Browsing mode
-* Private browsing breaks Kerberos authentication
-* Disables "Containers" functionality (see below)
-* "Always use private browsing mode" (browser.privatebrowsing.autostart) disables the possibility to use password manager: https://support.mozilla.org/en-US/kb/usernames-and-passwords-are-not-saved#w_private-browsing
-* Installing user.js will remove your browsing history, caches and local storage.
-* Installing user.js **will remove your saved passwords** (https://github.com/pyllyukko/user.js/issues/27)
-* Clearing open windows on Firefox exit causes 2 windows to open when Firefox starts https://bugzilla.mozilla.org/show_bug.cgi?id=1334945
 * .URL shortcut files will be created with a generic icon
 * disabling "beforeunload" events may lead to losing data entered in web forms
 * OCSP leaks your IP and domains you visit to the CA when OCSP Stapling is not available on visited host
