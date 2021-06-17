@@ -82,6 +82,7 @@ user_pref("media.peerconnection.ice.default_address_only",	true); // Firefox 42-
 user_pref("media.peerconnection.ice.no_host",			true); // Firefox >= 52
 
 // PREF: Disable WebRTC getUserMedia, screen sharing, audio capture, video capture (disabled)
+// NOTICE-DISABLED: Disabling media.navigator.* breaks peer-to-peer file sharing tools and camera/microphone integration
 // https://wiki.mozilla.org/Media/getUserMedia
 // https://blog.mozilla.org/futurereleases/2013/01/12/capture-local-camera-and-microphone-streams-with-getusermedia-now-enabled-in-firefox/
 // https://developer.mozilla.org/en-US/docs/Web/API/Navigator
