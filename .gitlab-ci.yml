@@ -1,0 +1,11 @@
+image: node
+
+stages:
+  - test
+
+test:
+  script:
+    - apt -y update && apt -y install shellcheck
+    - npm install -g acorn
+    - acorn --silent user.js
+    - make tests
