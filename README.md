@@ -14,7 +14,7 @@ A [user.js](http://kb.mozillazine.org/User.js_file) configuration file for [Mozi
 * Harden the browser against known data disclosure or code execution vulnerabilities.
 * Limit the browser from storing anything even remotely sensitive persistently.
 * Make sure the browser doesn't reveal too much information to [shoulder surfers](https://en.wikipedia.org/wiki/Shoulder_surfing_%28computer_security%29).
-* Harden the browser's encryption (cipher suites, protocols, trusted CAs).
+* Harden the browser's encryption (cipher suites, protocols).
 * Limit possibilities to uniquely identify the browser/device using [browser fingerprinting](https://en.wikipedia.org/wiki/Device_fingerprint).
 * Hopefully limit the attack surface by disabling various features.
 * Still be usable in daily use.
@@ -310,13 +310,14 @@ Improve visibility of security-related elements, mitigate shoulder-surfing
 ### Cryptography
 
 [TLS](https://en.wikipedia.org/wiki/Transport_Layer_Security) protocol related settings
+* Enable HTTPS-Only Mode [ [1](https://blog.mozilla.org/security/2020/11/17/firefox-83-introduces-https-only-mode/) [2](https://www.feistyduck.com/bulletproof-tls-newsletter/issue_71_firefox_introduces_https_only_mode) ]
 * Enable HSTS preload list (pre-set HSTS sites list provided by Mozilla) [ [1](https://blog.mozilla.org/security/2012/11/01/preloading-hsts/) [2](https://wiki.mozilla.org/Privacy/Features/HSTS_Preload_List) [3](https://en.wikipedia.org/wiki/HTTP_Strict_Transport_Security) ]
 * Enable Online Certificate Status Protocol [ [1](https://en.wikipedia.org/wiki/Online_Certificate_Status_Protocol) [2](https://www.imperialviolet.org/2014/04/19/revchecking.html) [3](https://www.maikel.pro/blog/current-state-certificate-revocation-crls-ocsp/) [4](https://wiki.mozilla.org/CA:RevocationPlan) [5](https://wiki.mozilla.org/CA:ImprovingRevocation) [6](https://wiki.mozilla.org/CA:OCSP-HardFail) [7](https://news.netcraft.com/archives/2014/04/24/certificate-revocation-why-browsers-remain-affected-by-heartbleed.html) [8](https://news.netcraft.com/archives/2013/04/16/certificate-revocation-and-the-performance-of-ocsp.html) ]
 * Enable OCSP Stapling support [ [1](https://en.wikipedia.org/wiki/OCSP_stapling) [2](https://blog.mozilla.org/security/2013/07/29/ocsp-stapling-in-firefox/) [3](https://www.digitalocean.com/community/tutorials/how-to-configure-ocsp-stapling-on-apache-and-nginx) ]
 * Enable OCSP Must-Staple support (Firefox >= 45) [ [1](https://blog.mozilla.org/security/2015/11/23/improving-revocation-ocsp-must-staple-and-short-lived-certificates/) [2](https://www.entrust.com/ocsp-must-staple/) [3](https://github.com/schomery/privacy-settings/issues/40) ]
 * Require a valid OCSP response for OCSP enabled certificates [ [1](https://groups.google.com/forum/#!topic/mozilla.dev.security/n1G-N2-HTVA) ]
 * Disable TLS Session Tickets [ [1](https://www.blackhat.com/us-13/briefings.html#NextGen) [2](https://media.blackhat.com/us-13/US-13-Daigniere-TLS-Secrets-Slides.pdf) [3](https://media.blackhat.com/us-13/US-13-Daigniere-TLS-Secrets-WP.pdf) [4](https://bugzilla.mozilla.org/show_bug.cgi?id=917049) [5](https://bugzilla.mozilla.org/show_bug.cgi?id=967977) ]
-* Only allow TLS 1.[0-3] [ [1](http://kb.mozillazine.org/Security.tls.version.*) ]
+* Only allow TLS 1.[2-3] [ [1](http://kb.mozillazine.org/Security.tls.version.*) ]
 * Disable insecure TLS version fallback [ [1](https://bugzilla.mozilla.org/show_bug.cgi?id=1084025) [2](https://github.com/pyllyukko/user.js/pull/206#issuecomment-280229645) ]
 * Enforce Public Key Pinning [ [1](https://en.wikipedia.org/wiki/HTTP_Public_Key_Pinning) [2](https://wiki.mozilla.org/SecurityEngineering/Public_Key_Pinning) ]
 * Disallow SHA-1 [ [1](https://bugzilla.mozilla.org/show_bug.cgi?id=1302140) [2](https://shattered.io/) ]
@@ -363,10 +364,7 @@ This section tweaks the cipher suites used by Firefox. The idea is to support on
 
 **This is not enough!** Here's some other tips how you can further harden Firefox:
 
-* By default **your browser trusts 100's of [Certificate Authorities](https://en.wikipedia.org/wiki/Certificate_authority)** (CAs) from various organizations to guarantee privacy of your encrypted communications with websites. Some CAs have been known for misusing or deliberately abusing this power in the past, and **a single malicious CA can compromise all** your encrypted communications! To workaround this you may want to [inspect the list of trusted certificates](https://support.mozilla.org/en-US/kb/advanced-panel-settings-in-firefox?#w_certificates-tab).
-
-[[1](https://blog.torproject.org/blog/life-without-ca), [2](https://www.thawte.com/roots/), [3](https://www.entrust.com/products/developer-api-standards/)
-
+* By default **your browser trusts 100's of [Certificate Authorities](https://en.wikipedia.org/wiki/Certificate_authority)** (CAs) from various organizations to guarantee privacy of your encrypted communications with websites. Some CAs have been known for misusing or deliberately abusing this power in the past, and **a single malicious CA can compromise all** your encrypted communications! To workaround this you may want to [inspect the list of trusted certificates](https://support.mozilla.org/en-US/kb/advanced-panel-settings-in-firefox?#w_certificates-tab). [[1](https://blog.torproject.org/blog/life-without-ca)]
 * Keep your browser updated! If you check [Firefox's security advisories](https://www.mozilla.org/security/known-vulnerabilities/firefox.html), you'll see that pretty much every new version of Firefox contains some security updates. If you don't keep your browser updated, you've already lost the game.
 * Disable/uninstall all unnecessary extensions and plugins!
 * Use long and **unique** passwords/passphrases for each website/service.
@@ -389,12 +387,9 @@ Here is a list of the most essential security and privacy enhancing add-ons that
   * For additional protection, set it to [Hard mode](https://github.com/gorhill/uBlock/wiki/Blocking-mode:-hard-mode) (experienced users) - the default is [Easy mode](https://github.com/gorhill/uBlock/wiki/Blocking-mode:-easy-mode)
 * [HTTPS Everywhere](https://www.eff.org/https-everywhere)
   * For additional protection, enable `Block all unencrypted requests` in the toolbar button menu. This will break websites where HTTPS is not available.
-* [Certificate Patrol](http://patrol.psyced.org/) (experienced users)
-  * Setting `Store certificates even when in Private Browsing mode` improves usability. This will store information about sites you visit.
+* [Cookie AutoDelete](https://addons.mozilla.org/en-US/firefox/addon/cookie-autodelete/) - when a tab closes, any cookies not being used are automatically deleted. Whitelist the ones you trust while deleting the rest.
 * [NoScript](https://noscript.net/)
-* [No Resource URI Leak](https://addons.mozilla.org/firefox/addon/no-resource-uri-leak/) [ [1](https://bugzilla.mozilla.org/show_bug.cgi?id=863246) [2](https://bugzilla.mozilla.org/show_bug.cgi?id=903959) [3](https://www.browserleaks.com/firefox) [4](https://cs1.ca/ttest/dump.html) [5](https://trac.torproject.org/projects/tor/ticket/8725) ]
 * [Decentraleyes](https://addons.mozilla.org/firefox/addon/decentraleyes/)
-* [Canvas Blocker](https://addons.mozilla.org/firefox/addon/canvasblocker/)
 
 Additional add-ons that you might consider using or reading about:
 
@@ -410,6 +405,7 @@ Hardening your often implies a trade-off with ease-of-use and comes with reduced
 
 <!-- BEGIN PROBLEMS-LIMITATIONS -->
 * Disabling ServiceWorkers breaks functionality on some sites (Google Street View...)
+* Disabling ServiceWorkers breaks Firefox Sync
 * Web Audio API is required for Unity web player/games
 * Disabling clipboard operations will break legitimate JS-based "copy to clipboard" functionality
 * Enabling Mixed Display Content blocking can prevent images/styles... from loading properly when connection to the website is only partially secured
