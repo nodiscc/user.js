@@ -143,7 +143,6 @@ Some of the settings in this `user.js` file might seem redundant, as some of the
 ### HTML5 / APIs / DOM
 
 HTML5 / [APIs](https://wiki.mozilla.org/WebAPI) / [DOM](https://en.wikipedia.org/wiki/Document_Object_Model) related settings. Mozilla is keen to implement every new HTML5 feature, which have had unforeseen security or privacy implications. This section disables many of those new and yet to be proven technologies.
-* Disable Service Workers [ [1](https://developer.mozilla.org/en-US/docs/Web/API/Worker) [2](https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorker_API) [3](https://wiki.mozilla.org/Firefox/Push_Notifications#Service_Workers) ]
 * Disable web notifications [ [1](https://support.mozilla.org/en-US/questions/1140439) ]
 * Disable DOM timing API [ [1](https://wiki.mozilla.org/Security/Reviews/Firefox/NavigationTimingAPI) [2](https://www.w3.org/TR/navigation-timing/#privacy) ]
 * Make sure the User Timing API does not provide a new high resolution timestamp [ [1](https://trac.torproject.org/projects/tor/ticket/16336) [2](https://www.w3.org/TR/2013/REC-user-timing-20131212/#privacy-security) ]
@@ -254,6 +253,7 @@ Prevents the browser from [auto-connecting](https://support.mozilla.org/en-US/kb
 * Reject .onion hostnames before passing the to DNS [ [1](https://bugzilla.mozilla.org/show_bug.cgi?id=1228457) ]
 * Disable search suggestions in the search bar [ [1](http://kb.mozillazine.org/Browser.search.suggest.enabled) ]
 * Disable "Show search suggestions in location bar results"
+* Disable Firefox Suggest [ [1](https://www.ghacks.net/2021/09/09/how-to-disable-firefox-suggest/) [2](https://support.mozilla.org/en-US/kb/navigate-web-faster-firefox-suggest) ]
 * Disable SSDP [ [1](https://bugzilla.mozilla.org/show_bug.cgi?id=1111967) ]
 * Disable automatic downloading of OpenH264 codec [ [1](https://support.mozilla.org/en-US/kb/how-stop-firefox-making-automatic-connections#w_media-capabilities) [2](https://andreasgal.com/2014/10/14/openh264-now-in-firefox/) ]
 * Disable speculative pre-connections [ [1](https://support.mozilla.org/en-US/kb/how-stop-firefox-making-automatic-connections#w_speculative-pre-connections) [2](https://bugzilla.mozilla.org/show_bug.cgi?id=814169) ]
@@ -404,8 +404,6 @@ Additional add-ons that you might consider using or reading about:
 Hardening your often implies a trade-off with ease-of-use and comes with reduced functionality. Here is a list of known problems/limitations:
 
 <!-- BEGIN PROBLEMS-LIMITATIONS -->
-* Disabling ServiceWorkers breaks functionality on some sites (Google Street View...)
-* Disabling ServiceWorkers breaks Firefox Sync
 * Web Audio API is required for Unity web player/games
 * Disabling clipboard operations will break legitimate JS-based "copy to clipboard" functionality
 * Enabling Mixed Display Content blocking can prevent images/styles... from loading properly when connection to the website is only partially secured
@@ -416,9 +414,6 @@ Hardening your often implies a trade-off with ease-of-use and comes with reduced
 * RFP changes your time zone
 * Fully automatic updates are disabled and left to package management systems on Linux. Windows users may want to change this setting.
 * Do No Track must be enabled manually
-* Spoofing referers breaks functionality on websites relying on authentic referer headers
-* Spoofing referers breaks visualisation of 3rd-party sites on the Lightbeam addon
-* Spoofing referers disables CSRF protection on some login pages not implementing origin-header/cookie+token based CSRF protection
 * Blocking 3rd-party cookies breaks a number of payment gateways
 * First-party isolation breaks Microsoft Teams
 * First-party isolation causes HTTP basic auth to ask for credentials for every new tab (see #425)

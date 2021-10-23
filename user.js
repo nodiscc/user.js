@@ -670,9 +670,10 @@ user_pref("browser.search.suggest.enabled",			false);
 user_pref("browser.urlbar.suggest.searches",			false);
 // PREF: When using the location bar, don't suggest URLs from browsing history (disabled)
 //user_pref("browser.urlbar.suggest.history",			false);
-// PREF: "Show Firefox Suggest in the address bar (suggested and sponsored results)"
+// PREF: Disable Firefox Suggest
 // https://www.ghacks.net/2021/09/09/how-to-disable-firefox-suggest/
-user_pref("browser.urlbar.groupLabels.enabled", false);
+// https://support.mozilla.org/en-US/kb/navigate-web-faster-firefox-suggest
+user_pref("browser.urlbar.groupLabels.enabled", false); // Firefox >= 93
 
 // PREF: Disable SSDP
 // https://bugzilla.mozilla.org/show_bug.cgi?id=1111967
@@ -737,9 +738,9 @@ user_pref("security.sri.enable",				true);
 // PREF: Send a referer header with the target URI as the source (disabled)
 // https://bugzilla.mozilla.org/show_bug.cgi?id=822869
 // https://github.com/pyllyukko/user.js/issues/227
-// NOTICE: Spoofing referers breaks functionality on websites relying on authentic referer headers
-// NOTICE: Spoofing referers breaks visualisation of 3rd-party sites on the Lightbeam addon
-// NOTICE: Spoofing referers disables CSRF protection on some login pages not implementing origin-header/cookie+token based CSRF protection
+// NOTICE-DISABLED: Spoofing referers breaks functionality on websites relying on authentic referer headers
+// NOTICE-DISABLED: Spoofing referers breaks visualisation of 3rd-party sites on the Lightbeam addon
+// NOTICE-DISABLED: Spoofing referers disables CSRF protection on some login pages not implementing origin-header/cookie+token based CSRF protection
 // TODO: https://github.com/pyllyukko/user.js/issues/94, commented-out XOriginPolicy/XOriginTrimmingPolicy = 2 prefs
 //user_pref("network.http.referer.spoofSource",			true);
 
