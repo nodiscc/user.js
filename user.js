@@ -412,9 +412,9 @@ user_pref("browser.safebrowsing.blockedURIs.enabled", true);
 // PREF: Disable Gnome Shell Integration NPAPI plugin
 user_pref("plugin.state.libgnome-shell-browser-plugin",		0);
 
-// PREF: Disable the bundled OpenH264 video codec (disabled)
+// PREF: Disable the bundled OpenH264 video codec
 // http://forums.mozillazine.org/viewtopic.php?p=13845077&sid=28af2622e8bd8497b9113851676846b1#p13845077
-//user_pref("media.gmp-provider.enabled",		false);
+user_pref("media.gmp-provider.enabled",		false);
 
 // PREF: Enable plugins click-to-play
 // https://wiki.mozilla.org/Firefox/Click_To_Play
