@@ -143,7 +143,6 @@ Some of the settings in this `user.js` file might seem redundant, as some of the
 ### HTML5 / APIs / DOM
 
 HTML5 / [APIs](https://wiki.mozilla.org/WebAPI) / [DOM](https://en.wikipedia.org/wiki/Document_Object_Model) related settings. Mozilla is keen to implement every new HTML5 feature, which have had unforeseen security or privacy implications. This section disables many of those new and yet to be proven technologies.
-* Disable web notifications [ [1](https://support.mozilla.org/en-US/questions/1140439) ]
 * Disable DOM timing API [ [1](https://wiki.mozilla.org/Security/Reviews/Firefox/NavigationTimingAPI) [2](https://www.w3.org/TR/navigation-timing/#privacy) ]
 * Disable resource timing API [ [1](https://www.w3.org/TR/resource-timing/#privacy-security) ]
 * Make sure the User Timing API does not provide a new high resolution timestamp [ [1](https://trac.torproject.org/projects/tor/ticket/16336) [2](https://www.w3.org/TR/2013/REC-user-timing-20131212/#privacy-security) ]
