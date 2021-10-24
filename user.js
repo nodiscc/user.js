@@ -37,10 +37,10 @@ user_pref("dom.enable_resource_timing",				false);
 // https://www.w3.org/TR/2013/REC-user-timing-20131212/#privacy-security
 user_pref("dom.enable_user_timing",				false);
 
-// PREF: Disable Web Audio API
+// PREF: Disable Web Audio API (disabled)
 // https://bugzilla.mozilla.org/show_bug.cgi?id=1288359
-// NOTICE: Web Audio API is required for Unity web player/games
-user_pref("dom.webaudio.enabled",				false);
+// NOTICE-DISABLED: Web Audio API is required for Unity web player/games
+//user_pref("dom.webaudio.enabled",				false);
 
 // PREF: Disable Location-Aware Browsing (geolocation)
 // https://www.mozilla.org/en-US/firefox/geolocation/
