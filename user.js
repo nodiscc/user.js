@@ -42,9 +42,9 @@ user_pref("dom.enable_user_timing",				false);
 // NOTICE-DISABLED: Web Audio API is required for Unity web player/games
 //user_pref("dom.webaudio.enabled",				false);
 
-// PREF: Disable Location-Aware Browsing (geolocation)
+// PREF: Disable Location-Aware Browsing (geolocation) (disabled)
 // https://www.mozilla.org/en-US/firefox/geolocation/
-user_pref("geo.enabled",					false);
+//user_pref("geo.enabled",					false);
 
 // PREF: When geolocation is enabled, use Mozilla geolocation service instead of Google
 // https://bugzilla.mozilla.org/show_bug.cgi?id=689252
