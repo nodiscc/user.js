@@ -1319,4 +1319,4 @@ user_pref("general.smoothScroll.pages", false);
 //user_pref("network.proxy.socks_remote_dns", true);
 
 // PREF: Don't show cookie autodelete migration/settings dialog on first startup
-user_pref("extensions.websextensions.ExtensionStorageIDB.migrated.CookieAutoDelete@kennydo.com", true);
+user_pref("extensions.webextensions.ExtensionStorageIDB.migrated.CookieAutoDelete@kennydo.com", true);
