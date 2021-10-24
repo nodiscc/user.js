@@ -1312,3 +1312,6 @@ user_pref("general.smoothScroll.pages", false);
 
 // PREF: Perform DNS lookups on remote SOCKS proxy server when a SOCKS proxy is enabled (disabled)
 //user_pref("network.proxy.socks_remote_dns", true);
+
+// PREF: Don't show cookie autodelete migration/settings dialog on first startup
+user_pref("extensions.websextensions.ExtensionStorageIDB.migrated.CookieAutoDelete@kennydo.com", true);
