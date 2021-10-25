@@ -224,8 +224,8 @@ user_pref("browser.search.geoip.url",				"");
 // http://kb.mozillazine.org/Intl.locale.matchOS
 //user_pref("intl.locale.matchOS",				false);
 
-// Use LANG environment variable to choose locale (disabled)
-//pref("intl.locale.requested", "");
+// Use LANG environment variable to choose locale
+pref("intl.locale.requested", "");
 
 // PREF: Don't use Mozilla-provided location-specific search engines
 user_pref("browser.search.geoSpecificDefaults",			false);
