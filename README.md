@@ -346,6 +346,7 @@ This section tweaks the cipher suites used by Firefox. The idea is to support on
 * Display installed addons list by default in about:addons (instead of AMO homepage)
 * Show new search bar menu including search engine buttons
 * Set the default buttons/UI layout (addons in personal toolbar)
+* always show the bookmarks toolbar
 * Enable HTTP pipelining (performance) (disabled for compatibility) [ [1](https://developer.mozilla.org/en-US/docs/Web/HTTP/Connection_management_in_HTTP_1.x) ]
 * Only store 3 previous history pages in memory (performance) (default: -1, automatic) [ [1](http://kb.mozillazine.org/Browser.sessionhistory.max_total_viewers) ]
 * Increase time between session save operations (default 15000) (performance) [ [1](http://kb.mozillazine.org/Browser.sessionstore.interval) ]
