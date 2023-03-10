@@ -637,6 +637,10 @@ user_pref("extensions.pocket.enabled",				false);
 // PREF: Disable "Recommended by Pocket" in Firefox Quantum
 user_pref("browser.newtabpage.activity-stream.feeds.section.topstories",	false);
 
+// PREF: Disable sponsored sites on new tab page
+user_pref("browser.newtabpage.activity-stream.showSponsored",	false);
+user_pref("browser.newtabpage.activity-stream.showSponsoredTopSites",	false);
+
 /******************************************************************************
  * SECTION: Automatic connections                                             *
  ******************************************************************************/
