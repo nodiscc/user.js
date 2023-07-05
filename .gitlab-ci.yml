@@ -1,11 +1,9 @@
-image: node
+image: debian:stable
 
 stages:
   - test
 
 test:
   script:
-    - apt -y update && apt -y install shellcheck
-    - npm install -g acorn
-    - acorn --silent user.js
+    - apt -y update && apt -y install make node-acorn shellcheck
     - make tests
