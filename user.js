@@ -174,10 +174,11 @@ user_pref("dom.archivereader.enabled",				false);
 // PREF: Disable webGL (disabled)
 // https://en.wikipedia.org/wiki/WebGL
 // https://www.contextis.com/resources/blog/webgl-new-dimension-browser-exploitation/
-//user_pref("webgl.disabled",					true);
-// PREF: When webGL is enabled, use the minimum capability mode (disabled)
-//user_pref("webgl.min_capability_mode",				true);
-// PREF: When webGL is enabled, disable webGL extensions (disabled)
+// NOTICE-DISABLED: Disabling WebGL breaks WebGL-based websites/applications (windy, meteoblue...)
+user_pref("webgl.disabled",					true);
+// PREF: When webGL is enabled, use the minimum capability mode
+user_pref("webgl.min_capability_mode",				true);
+// PREF: When webGL is enabled, disable webGL extensions
 // https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API#WebGL_debugging_and_testing
 //user_pref("webgl.disable-extensions",				true);
 // PREF: When webGL is enabled, force enabling it even when layer acceleration is not supported
@@ -712,6 +713,11 @@ user_pref("browser.search.update",				false);
 // PREF: Disable automatic captive portal detection (Firefox >= 52.0)
 // https://support.mozilla.org/en-US/questions/1157121
 user_pref("network.captive-portal-service.enabled",		false);
+
+// PREF: Disable (parts of?) "TopSites"
+user_pref("browser.topsites.contile.enabled",				false);
+user_pref("browser.newtabpage.activity-stream.feeds.topsites",		false);
+user_pref("browser.newtabpage.activity-stream.showSponsoredTopSites",	false);
 
 /******************************************************************************
  * SECTION: HTTP                                                              *
