@@ -38,6 +38,7 @@ There are several parts to all this and they are:
 * [Contributing](#contributing)
 * [Online tests](#online-tests)
 * [References](#references)
+* [Maintenance](#maintenance)
 
 
 ----------------------------------------------
@@ -574,6 +575,38 @@ For more information, see [CONTRIBUTING](https://github.com/pyllyukko/user.js/bl
 * [Server-side TLS configuration](https://wiki.mozilla.org/Security/Server_Side_TLS)
 
 --------------------------------------------------------------------------
+
+## Maintenance
+
+Run `make help` to get a list of makefile targets used for frequent maintenance operations.
+
+```
+$ make help 
+locked_user.js      generate a locked configuration file
+systemwide_user.js  generate a system-wide configuration file
+debian_locked.js #  generate a locked, system-wide configuration file
+policies.json       generate policy file (https://github.com/mozilla/policy-templates/blob/master/README.md)
+tests               run all tests
+test-acorn          validate user.js syntax
+test-bash-syntax    check syntax of all bash scripts
+test-shellcheck     check/lint shell scripts
+diff-000-tor-browser.js                 download Tor Browser custom configuration reference
+diff-tbb            differences between values from this user.js and tor browser's values
+diff-tbb-2          differences between values from this user.js and tor browser's values (alternate method)
+diff-tbb-missing-from-user.js           preferences that are present in tor browser's defaults, but not in this user.js
+diff-sourceprefs.js download and sort all known preferences files from Firefox (mozilla-central) source
+diff-upstream-duplicates                preferences with common values with default Firefox configuration
+diff-upstream-missing-from-user.js      preferences present in firefox source but not covered by user.js
+diff-upstream-deprecated                preferences in hardened user.js that are no longer present in firefox source
+diff-stats          count preferences number, various stats
+clean               clean automatically generated files/build/test artifacts
+doc-whatdoesitdo    generate the README "What does it do?" section
+doc-toc             generate the README table of contents
+help                generate list of targets with descriptions
+
+```
+
+-----------------------------
 
 [2]: https://wiki.mozilla.org/Security:Renegotiation#security.ssl.require_safe_negotiation
 [8]: https://support.mozilla.org/en-US/kb/Private%20Browsing
