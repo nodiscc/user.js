@@ -175,10 +175,10 @@ user_pref("dom.archivereader.enabled",				false);
 // https://en.wikipedia.org/wiki/WebGL
 // https://www.contextis.com/resources/blog/webgl-new-dimension-browser-exploitation/
 // NOTICE-DISABLED: Disabling WebGL breaks WebGL-based websites/applications (windy, meteoblue...)
-user_pref("webgl.disabled",					true);
-// PREF: When webGL is enabled, use the minimum capability mode
-user_pref("webgl.min_capability_mode",				true);
-// PREF: When webGL is enabled, disable webGL extensions
+// user_pref("webgl.disabled",					true);
+// PREF: When webGL is enabled, use the minimum capability mode (disabled)
+// user_pref("webgl.min_capability_mode",				true);
+// PREF: When webGL is enabled, disable webGL extensions (disabled)
 // https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API#WebGL_debugging_and_testing
 //user_pref("webgl.disable-extensions",				true);
 // PREF: When webGL is enabled, force enabling it even when layer acceleration is not supported
