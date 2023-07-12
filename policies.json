@@ -7,6 +7,10 @@
     "SearchEngines": {
       "Default": "DuckDuckGo",
       "Default_comment": "Set the default search engine to DuckDuckGo instead of Google."
-    }
+    },
+    "DisplayBookmarksToolbar": "always",
+    "DisplayBookmarksToolbar_comment": "Set the initial state of the bookmarks toolbar.",
+    "SearchBar": "separate",
+    "SearchBar_comment": "Always display separate search/location bars"
   }
 }
