@@ -363,6 +363,7 @@ This section tweaks the cipher suites used by Firefox. The idea is to support on
 * Let transmission handle magnet links
 * Allow scrolling on middle mouse button click
 * Prompt for confirmation when closing the browser when more than one tab is open. [ [1](http://kb.mozillazine.org/About:config_entries#Browser.) ]
+* Replace the window title bar with the tabs bar
 * Hide "know your rights" button on first run
 * Suppress Firefox Accounts "Welcome" page/"What's new" page after upgrades
 * Display installed addons list by default in about:addons (instead of AMO homepage)

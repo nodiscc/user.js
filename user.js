@@ -1276,6 +1276,9 @@ user_pref("general.autoScroll", true);
 // http://kb.mozillazine.org/About:config_entries#Browser.
 user_pref("browser.tabs.warnOnClose", true);
 
+// PREF: Replace the window title bar with the tabs bar
+user_pref("browser.tabs.inTitlebar", 1);
+
 // PREF: Hide "know your rights" button on first run
 user_pref("browser.rights.3.shown", false);
 
