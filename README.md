@@ -127,9 +127,9 @@ To install [policies.json](policies.json) from this repository, simply copy it t
 | ------------------------- | ------------------------------------------------------------------------------- |
 | Windows                   | `C:\Program Files (x86)\Mozilla Firefox\distribution\`                          |
 | OS X                      | `/Applications/Firefox.app/distribution\`                                       |
-| Linux (Debian             | `/etc/firefox-esr/policies/`                                                        |
+| Linux (Debian)            | `/etc/firefox-esr/policies/`                                                    |
 
-Note that JSON does not support comments, hence settings are documented in custom `*_comment` keys. Mozilla maintains a list of available policies: [[2]](https://mozilla.github.io/policy-templates/) [[3]](https://github.com/mozilla/policy-templates). The [Enterprise Policy Generator]https://addons.mozilla.org/en-US/firefox/addon/enterprise-policy-generator/) add-on can be used to generate `policies.json` files from a graphical interface.
+Note that JSON does not support comments, hence settings are documented in custom `*_comment` keys. Mozilla maintains a list of available policies: [[1]](https://mozilla.github.io/policy-templates/) [[2]](https://github.com/mozilla/policy-templates). The [Enterprise Policy Generator](https://addons.mozilla.org/en-US/firefox/addon/enterprise-policy-generator/) add-on can be used to generate `policies.json` files from a graphical interface.
 
 
 ### Updating using git
@@ -147,7 +147,7 @@ ln -s ../user.js/user.js user.js
 
 Verify that the settings are effective from [about:support](http://kb.mozillazine.org/Troubleshooting_Information_report#Modified_Preferences) (check the "Important Modified Preferences" and "user.js Preferences" sections).
 
-Verify that policies are effectve from [about:policies](https://support.mozilla.org/en-US/kb/see-active-policies-firefox-enterprise).
+Verify that policies are effective from [about:policies](https://support.mozilla.org/en-US/kb/see-active-policies-firefox-enterprise).
 
 --------------------------------------------
 
