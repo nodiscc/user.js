@@ -250,6 +250,10 @@ user_pref("javascript.use_us_english_locale",			true);
 // https://bugzilla.mozilla.org/show_bug.cgi?id=665580
 user_pref("browser.urlbar.trimURLs",				false);
 
+// PREF: Disable preloading of autocomplete URLs.
+// https://wiki.mozilla.org/Privacy/Privacy_Task_Force/firefox_about_config_privacy_tweeks
+user_pref("browser.urlbar.speculativeConnect.enabled", false);
+
 // PREF: Don't try to guess domain names when entering an invalid domain name in URL bar
 // http://www-archive.mozilla.org/docs/end-user/domain-guessing.html
 user_pref("browser.fixup.alternate.enabled",			false);
