@@ -110,7 +110,9 @@ user_pref("dom.telephony.enabled",				false);
 // https://developer.mozilla.org/en-US/docs/Web/API/navigator.sendBeacon
 user_pref("beacon.enabled",					false);
 
-// PREF: Disable clipboard event detection (onCut/onCopy/onPaste) via Javascript (disabled)
+// PREF: Disable clipboard event detection (onCut/onCopy/onPaste) via Javascript
+// https://web.archive.org/web/20210416195937/https://developer.mozilla.org/en-US/docs/Mozilla/Preferences/Preference_reference/dom.event.clipboardevents.enabled
+// https://github.com/pyllyukko/user.js/issues/287
 // NOTICE-DISABLED: Disabling clipboard events breaks Ctrl+C/X/V copy/cut/paste functionaility in JS-based web applications (Google Docs...)
 // https://developer.mozilla.org/en-US/docs/Mozilla/Preferences/Preference_reference/dom.event.clipboardevents.enabled
 //user_pref("dom.event.clipboardevents.enabled",			false);
