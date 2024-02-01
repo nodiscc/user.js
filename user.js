@@ -110,7 +110,7 @@ user_pref("dom.telephony.enabled",				false);
 // https://developer.mozilla.org/en-US/docs/Web/API/navigator.sendBeacon
 user_pref("beacon.enabled",					false);
 
-// PREF: Disable clipboard event detection (onCut/onCopy/onPaste) via Javascript
+// PREF-DISABLED: Disable clipboard event detection (onCut/onCopy/onPaste) via Javascript
 // https://web.archive.org/web/20210416195937/https://developer.mozilla.org/en-US/docs/Mozilla/Preferences/Preference_reference/dom.event.clipboardevents.enabled
 // https://github.com/pyllyukko/user.js/issues/287
 // NOTICE-DISABLED: Disabling clipboard events breaks Ctrl+C/X/V copy/cut/paste functionaility in JS-based web applications (Google Docs...)
@@ -1335,6 +1335,10 @@ user_pref("general.smoothScroll.pages", false);
 // PREF: Force webGL acceleration (performance) (disabled)
 // user_pref("layers.acceleration.force-enabled", true);
 // user_pref("layers.offmainthreadcomposition.enabled", true);
+
+// PREF: Enable WebRender (performance)
+// https://wiki.mozilla.org/Platform/GFX/Quantum_Render
+user_pref("gfx.webrender.all", true);
 
 // Proxy preferences (performance) (disabled)
 // user_pref("network.http.max-persistent-connections-per-proxy", 16);
