@@ -374,6 +374,7 @@ This section tweaks the cipher suites used by Firefox. The idea is to support on
 * Only store 3 previous history pages in memory (performance) (default: -1, automatic) [ [1](http://kb.mozillazine.org/Browser.sessionhistory.max_total_viewers) ]
 * Increase time between session save operations (default 15000) (performance) [ [1](http://kb.mozillazine.org/Browser.sessionstore.interval) ]
 * Disable smooth scrolling (performance)
+* Enable WebRender (performance) [ [1](https://wiki.mozilla.org/Platform/GFX/Quantum_Render) ]
 * Don't show cookie autodelete migration/settings dialog on first startup
 <!-- END SECTION -->
 
