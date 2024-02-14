@@ -284,7 +284,9 @@ HTTP protocol related entries. This affects cookies, the user agent, referer and
 * Enable CSP 1.1 script-nonce directive support [ [1](https://bugzilla.mozilla.org/show_bug.cgi?id=855326) ]
 * Enable Content Security Policy (CSP) [ [1](https://developer.mozilla.org/en-US/docs/Web/Security/CSP/Introducing_Content_Security_Policy) [2](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP) ]
 * Enable Subresource Integrity [ [1](https://developer.mozilla.org/en-US/docs/Web/Security/Subresource_Integrity) [2](https://wiki.mozilla.org/Security/Subresource_Integrity) ]
-* Don't send referer headers when following links across different domains [ [1](https://github.com/pyllyukko/user.js/issues/227) [2](https://github.com/pyllyukko/user.js/issues/328) [3](https://feeding.cloud.geek.nz/posts/tweaking-referrer-for-privacy-in-firefox/) ]
+* Don't send referer headers when following links across different domains [ [1](https://github.com/pyllyukko/user.js/issues/227) [2](https://github.com/pyllyukko/user.js/issues/328) [3](https://feeding.cloud.geek.nz/posts/tweaking-referrer-for-privacy-in-firefox/) [4](https://wiki.mozilla.org/Privacy/Privacy_Task_Force/firefox_about_config_privacy_tweeks) ]
+* Trim HTTP referer headers to only send the scheme, host, and port [ [1](https://wiki.mozilla.org/Privacy/Privacy_Task_Force/firefox_about_config_privacy_tweeks) ]
+* When sending Referer across domains, only send scheme, host, and port in the Referer header [ [1](https://wiki.mozilla.org/Privacy/Privacy_Task_Force/firefox_about_config_privacy_tweeks) ]
 * Accept Only 1st Party Cookies [ [1](http://kb.mozillazine.org/Network.cookie.cookieBehavior#1) ]
 * Enable first-party isolation [ [1](https://bugzilla.mozilla.org/show_bug.cgi?id=1299996) [2](https://bugzilla.mozilla.org/show_bug.cgi?id=1260931) [3](https://wiki.mozilla.org/Security/FirstPartyIsolation) ]
 * Make sure that third-party cookies (if enabled) never persist beyond the session. [ [1](https://feeding.cloud.geek.nz/posts/tweaking-cookies-for-privacy-in-firefox/) [2](http://kb.mozillazine.org/Network.cookie.thirdparty.sessionOnly) [3](https://developer.mozilla.org/en-US/docs/Cookies_Preferences_in_Mozilla#network.cookie.thirdparty.sessionOnly) ]
@@ -294,6 +296,8 @@ HTTP protocol related entries. This affects cookies, the user agent, referer and
 Enable and configure private browsing mode, don't store information locally during the browsing session
 * Set time range to "Everything" as default in "Clear Recent History"
 * Clear everything but "Site Preferences" in "Clear Recent History"
+* Don't remember recently closed tabs
+* Disable disk cache [ [1](http://kb.mozillazine.org/Browser.cache.disk.enable) ]
 * Disable password manager (use an external password manager!)
 * Disable form autofill, don't save information entered in web page forms and the Search Bar
 * Cookies expires at the end of the session (when the browser closes) [ [1](http://kb.mozillazine.org/Network.cookie.lifetimePolicy#2) ]
@@ -357,6 +361,7 @@ This section tweaks the cipher suites used by Firefox. The idea is to support on
 * Enable ChaCha20 and Poly1305 (Firefox >= 47) [ [1](https://www.mozilla.org/en-US/firefox/47.0/releasenotes/) [2](https://tools.ietf.org/html/rfc7905) [3](https://bugzilla.mozilla.org/show_bug.cgi?id=917571) [4](https://bugzilla.mozilla.org/show_bug.cgi?id=1247860) [5](https://cr.yp.to/chacha.html) ]
 * Disable ciphers susceptible to the logjam attack [ [1](https://weakdh.org/) ]
 * Disable ciphers with DSA (max 1024 bits)
+* Enable X25519Kyber768Draft00 (post-quantum key exchange) [FF Nightly 2024-01-18+] [ [1](https://datatracker.ietf.org/doc/draft-tls-westerbaan-xyber768d00/) [2](https://twitter.com/bwesterb/status/1748017372764475519) [3](https://pq.cloudflareresearch.com/) ]
 * Abort after this number of HTTP redirections (default 20)
 * Maximum number of simultaneously open popup windows (default 20)
 * Pressing [Backspace] will go back a page in the session history [ [1](http://kb.mozillazine.org/Browser.backspace_action) ]
@@ -436,6 +441,7 @@ Hardening your often implies a trade-off with ease-of-use and comes with reduced
 * RFP breaks some DDoS protection pages (Cloudflare)
 * Fully automatic updates are disabled and left to package management systems on Linux. Windows users may want to change this setting.
 * Do No Track must be enabled manually
+* Blocking referers across same eTLD sites breaks some login flows relying on them, consider lowering this pref to 1
 * Blocking 3rd-party cookies breaks a number of payment gateways
 * First-party isolation breaks Microsoft Teams
 * First-party isolation causes HTTP basic auth to ask for credentials for every new tab (see #425)

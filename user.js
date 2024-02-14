@@ -770,7 +770,17 @@ user_pref("security.sri.enable",				true);
 // https://github.com/pyllyukko/user.js/issues/227
 // https://github.com/pyllyukko/user.js/issues/328
 // https://feeding.cloud.geek.nz/posts/tweaking-referrer-for-privacy-in-firefox/
+// https://wiki.mozilla.org/Privacy/Privacy_Task_Force/firefox_about_config_privacy_tweeks
+// NOTICE: Blocking referers across same eTLD sites breaks some login flows relying on them, consider lowering this pref to 1
 user_pref("network.http.referer.XOriginPolicy",		1);
+
+// PREF: Trim HTTP referer headers to only send the scheme, host, and port
+// https://wiki.mozilla.org/Privacy/Privacy_Task_Force/firefox_about_config_privacy_tweeks
+user_pref("network.http.referer.trimmingPolicy",	2);
+
+// PREF: When sending Referer across domains, only send scheme, host, and port in the Referer header
+// https://wiki.mozilla.org/Privacy/Privacy_Task_Force/firefox_about_config_privacy_tweeks
+user_pref("network.http.referer.XOriginTrimmingPolicy",	2);
 
 // PREF: Accept Only 1st Party Cookies
 // http://kb.mozillazine.org/Network.cookie.cookieBehavior#1
@@ -847,7 +857,10 @@ user_pref("privacy.cpd.sessions",				true);
 // PREF: Don't remember browsing history (disabled)
 //user_pref("places.history.enabled",				false);
 
-// PREF: Disable disk cache (disabled)
+// PREF: Don't remember recently closed tabs
+user_pref("browser.sessionstore.max_tabs_undo",		0);
+
+// PREF: Disable disk cache
 // http://kb.mozillazine.org/Browser.cache.disk.enable
 //user_pref("browser.cache.disk.enable",				false);
 
@@ -1251,6 +1264,12 @@ user_pref("security.ssl3.dhe_dss_camellia_256_sha",		false);
 //user_pref("security.ssl3.rsa_aes_128_sha",			false); // 0x2f
 //user_pref("security.ssl3.ecdhe_rsa_aes_256_sha",		false); // 0xc014
 //user_pref("security.ssl3.ecdhe_ecdsa_aes_256_sha",		false); // 0xc00a
+
+// PREF: Enable X25519Kyber768Draft00 (post-quantum key exchange) [FF Nightly 2024-01-18+]
+// https://datatracker.ietf.org/doc/draft-tls-westerbaan-xyber768d00/
+// https://twitter.com/bwesterb/status/1748017372764475519
+// https://pq.cloudflareresearch.com/
+user_pref("security.tls.enable_kyber",				true);
 
 /******************************************************************************
  * INTERFACE / USABILITY                                                      *
