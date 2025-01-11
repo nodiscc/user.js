@@ -140,7 +140,7 @@ For any of the above methods, you can keep your browser's `user.js` with the lat
 cd ~/.mozilla/firefox
 git clone 'https://github.com/pyllyukko/user.js.git'
 cd XXXXXXXX.your_profile_name
-ln -s ../user.js/user.js user.js
+ln -s ${HOME}/.mozilla/firefox/user.js/user.js user.js
 ```
 
 ### Verifying
@@ -390,7 +390,7 @@ This section tweaks the cipher suites used by Firefox. The idea is to support on
 * Change the Firefox's built-in tracking protection to use the [strict list](https://support.mozilla.org/en-US/kb/tracking-protection-pbm?as=u#w_change-your-block-list)
 * Change the timezone for Firefox by using the `TZ` environment variable (see [here](https://wiki.archlinux.org/index.php/Firefox_privacy#Change_browser_time_zone)) to reduce it's value in browser fingerprinting
 * If you are concerned about more advanced threats, use specialized hardened operating systems and browsers such as [Tails](https://tails.boum.org/) or [Tor Brower Bundle](https://www.torproject.org/projects/torbrowser.html.en)
-
+* [Do Not Track (DNT)](https://en.wikipedia.org/wiki/Do_Not_Track) is not set in the `user.js` and is left for the user to decide (see [#11](https://github.com/pyllyukko/user.js/issues/11))
 
 ### Add-ons
 
@@ -399,8 +399,6 @@ Here is a list of the most essential security and privacy enhancing add-ons that
 * [uBlock Origin](https://addons.mozilla.org/firefox/addon/ublock-origin/)
   * For additional protection, enable more blocklists in the addon dashboard.
   * For additional protection, set it to [Hard mode](https://github.com/gorhill/uBlock/wiki/Blocking-mode:-hard-mode) (experienced users) - the default is [Easy mode](https://github.com/gorhill/uBlock/wiki/Blocking-mode:-easy-mode)
-* [HTTPS Everywhere](https://www.eff.org/https-everywhere)
-  * For additional protection, enable `Block all unencrypted requests` in the toolbar button menu. This will break websites where HTTPS is not available.
 * [Cookie AutoDelete](https://addons.mozilla.org/en-US/firefox/addon/cookie-autodelete/) - when a tab closes, any cookies not being used are automatically deleted. Whitelist the ones you trust while deleting the rest.
 * [NoScript](https://noscript.net/)
 * [Decentraleyes](https://addons.mozilla.org/firefox/addon/decentraleyes/)
@@ -408,7 +406,7 @@ Here is a list of the most essential security and privacy enhancing add-ons that
 Additional add-ons that you might consider using or reading about:
 
 * [uMatrix](https://addons.mozilla.org/en-US/firefox/addon/umatrix/) (experienced users)
-* [Privacy Badger](https://www.eff.org/privacybadger)
+* [Privacy Badger](https://privacybadger.org)
 * [Mozilla Lightbeam](https://www.mozilla.org/en-US/lightbeam/)
 * [PRISM Break Web Browser Addons section](https://prism-break.org/en/subcategories/gnu-linux-web-browser-addons/)
 * [Ghostery](https://www.ghostery.com/) (proprietary software, maintained by [an advertising company](https://en.wikipedia.org/wiki/Ghostery))
@@ -571,7 +569,6 @@ For more information, see [CONTRIBUTING](https://github.com/pyllyukko/user.js/bl
 * **[User.js comparator](https://jm42.github.io/compare-user.js/)**
 * **[CVEs for Firefox - mitre.org](https://cve.mitre.org/cgi-bin/cvekey.cgi?keyword=firefox)**
 * [CVEs for Firefox - cvedetails.com](https://www.cvedetails.com/vulnerability-list/vendor_id-452/product_id-3264/Mozilla-Firefox.html)
-* [ghacksuserjs/ghacks-user.js](https://github.com/ghacksuserjs/ghacks-user.js): a similar project and great source of information, with different goals and methodology
 * [About:config entries - MozillaZine](http://kb.mozillazine.org/About:config_entries)
 * [Security and privacy-related preferences - MozillaZine](http://kb.mozillazine.org/Category:Security_and_privacy-related_preferences)
 * [Diff between various Firefox .js configurations in upcoming releases](https://cat-in-136.github.io/) **([RSS](https://cat-in-136.github.io/feed.xml))**
