@@ -1271,11 +1271,11 @@ user_pref("security.ssl3.dhe_dss_camellia_256_sha",		false);
 //user_pref("security.ssl3.ecdhe_rsa_aes_256_sha",		false); // 0xc014
 //user_pref("security.ssl3.ecdhe_ecdsa_aes_256_sha",		false); // 0xc00a
 
-// PREF: Enable X25519Kyber768Draft00 (post-quantum key exchange) [FF Nightly 2024-01-18+]
+// PREF-DISABLED: Enable X25519Kyber768Draft00 (post-quantum key exchange) [FF Nightly 2024-01-18+]
 // https://datatracker.ietf.org/doc/draft-tls-westerbaan-xyber768d00/
 // https://twitter.com/bwesterb/status/1748017372764475519
 // https://pq.cloudflareresearch.com/
-user_pref("security.tls.enable_kyber",				true);
+//user_pref("security.tls.enable_kyber",				true);
 
 /******************************************************************************
  * INTERFACE / USABILITY                                                      *
