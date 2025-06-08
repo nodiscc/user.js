@@ -27,10 +27,10 @@
 // https://www.w3.org/TR/navigation-timing/#privacy
 user_pref("dom.enable_performance",				false);
 
-// PREF: Disable resource timing API
+// PREF-DISABLED: Disable resource timing API
 // https://www.w3.org/TR/resource-timing/#privacy-security
-// NOTICE: Disabling resource timing API breaks some DDoS protection pages (Cloudflare)
-user_pref("dom.enable_resource_timing",				false);
+// NOTICE-DISABLED: Disabling resource timing API breaks some DDoS protection pages (Cloudflare)
+//user_pref("dom.enable_resource_timing",				false);
 
 // PREF: Make sure the User Timing API does not provide a new high resolution timestamp
 // https://trac.torproject.org/projects/tor/ticket/16336
