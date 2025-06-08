@@ -571,11 +571,11 @@ user_pref("extensions.webextensions.restrictedDomains", "");
 // https://bugzilla.mozilla.org/1448423
 user_pref("browser.startup.blankWindow", false);
 
-// PREF: Disable the built-in PDF viewer
+// PREF-DISABLED: Disable the built-in PDF viewer
 // https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2015-2743
 // https://blog.mozilla.org/security/2015/08/06/firefox-exploit-found-in-the-wild/
 // https://www.mozilla.org/en-US/security/advisories/mfsa2015-69/
-user_pref("pdfjs.disabled",					true);
+//user_pref("pdfjs.disabled",					true);
 
 // PREF: Disable collection/sending of the health report (healthreport.sqlite*)
 // https://support.mozilla.org/en-US/kb/firefox-health-report-understand-your-browser-perf
